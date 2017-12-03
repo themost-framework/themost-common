@@ -703,6 +703,8 @@ const FgMagenta = "\x1b[35m";
 const FgCyan = "\x1b[36m";
 const FgWhite = "\x1b[37m";
 
+const Bold = "\x1b[1m";
+
 const LogLevels = {
     error: 0,
     warn: 1,
@@ -716,7 +718,7 @@ const LogLevelColors = {
     warn: FgMagenta,
     info: FgBlack,
     verbose: FgBlue,
-    debug: FgGreen,
+    debug: Bold + FgGreen,
 };
 
 export interface ITraceLoggerOptions {

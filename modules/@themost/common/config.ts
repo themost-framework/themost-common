@@ -157,7 +157,7 @@ export class ConfigurationBase {
      * @returns {Object|Array}
      */
     public getSourceAt(p: string): any {
-        return _.at(this[configProperty],p.replace(/\//,"."))[0];
+        return _.at(this[configProperty],p.replace(/\//g,"."))[0];
     }
 
     /**
@@ -166,7 +166,7 @@ export class ConfigurationBase {
      * @returns {boolean}
      */
     public hasSourceAt(p: string): boolean {
-        return _.isObject(_.at(this[configProperty],p.replace(/\//,"."))[0]);
+        return _.isObject(_.at(this[configProperty],p.replace(/\//g,"."))[0]);
     }
 
     /**
@@ -176,7 +176,7 @@ export class ConfigurationBase {
      * @returns {Object}
      */
     public setSourceAt(p, value): any {
-        return _.set(this[configProperty], p, value);
+        return _.set(this[configProperty], p.replace(/\//g,"."), value);
     }
 
     /**

@@ -1,18 +1,18 @@
-import {assert} from 'chai';
+import {assert} from "chai";
+import "source-map-support/register";
 import {Args, Base26Number, Guid, LangUtils, PathUtils, RandomUtils, TextUtils, TraceUtils} from "../utils";
-import 'source-map-support/register';
 
-describe('test common errors', () => {
-    it('should use Args', () => {
+describe("test common errors", () => {
+    it("should use Args", () => {
 
         assert.doesNotThrow(()=> {
             const a = 5;
-            Args.check(typeof a === 'number',"Expected number") ;
+            Args.check(typeof a === "number","Expected number") ;
         });
 
         assert.throws(()=> {
             const a = 5;
-            Args.check(typeof a === 'string',"Expected string");
+            Args.check(typeof a === "string","Expected string");
         });
 
         assert.doesNotThrow(()=> {
@@ -46,7 +46,7 @@ describe('test common errors', () => {
         });
 
         assert.doesNotThrow(()=> {
-            const a = ()=>{
+            const a = ()=> {
                 return;
             };
             Args.notFunction(a,"Argument");
@@ -56,7 +56,6 @@ describe('test common errors', () => {
             const a = -100;
             Args.notFunction(a,"Argument");
         });
-
 
         assert.doesNotThrow(()=> {
             const a = 100;
@@ -90,7 +89,7 @@ describe('test common errors', () => {
 
     });
 
-    it('should use Base26 numbers', ()=> {
+    it("should use Base26 numbers", ()=> {
        const x = Base26Number.toBase26(100);
        assert.equal("wdaaaaaa",x);
        const y = new Base26Number(100);
@@ -98,59 +97,58 @@ describe('test common errors', () => {
        assert.equal(Base26Number.fromBase26("wdaaaaaa"),100);
     });
 
-
-    it('should use TextUtils.toMD5', ()=> {
+    it("should use TextUtils.toMD5", ()=> {
        const x = TextUtils.toMD5("Hello");
        assert.equal(x,"8b1a9953c4611296a827abf8c47804d7");
-       console.log("MD5", "Hello", x);
+       TraceUtils.log("MD5", "Hello", x);
     });
 
-    it('should use TextUtils.toSHA1', ()=> {
+    it("should use TextUtils.toSHA1", ()=> {
         const x = TextUtils.toSHA1("Hello");
         assert.equal(x,"f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0");
-        console.log("SHA1", "Hello", x);
+        TraceUtils.log("SHA1", "Hello", x);
     });
 
-    it('should use TextUtils.toSHA256', ()=> {
+    it("should use TextUtils.toSHA256", ()=> {
         const x = TextUtils.toSHA256("Hello");
         assert.equal(x,"185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969");
-        console.log("SHA256", "Hello", x);
+        TraceUtils.log("SHA256", "Hello", x);
     });
 
-    it('should use Guid class', ()=> {
+    it("should use Guid class", ()=> {
         const x = new Guid("71BE4D98-3873-4648-9154-C7F79D89E19D");
         assert.equal(x.toString(), "71BE4D98-3873-4648-9154-C7F79D89E19D");
     });
 
-    it('should get random Guids', ()=> {
+    it("should get random Guids", ()=> {
         for (let i = 1; i <= 10; i++) {
-            console.log("#" + i, Guid.newGuid().toString());
+            TraceUtils.log("#" + i, Guid.newGuid().toString());
         }
     });
 
-    it('should use RandomUtils class', ()=> {
+    it("should use RandomUtils class", ()=> {
 
-        let x = RandomUtils.randomChars(12);
+        const x = RandomUtils.randomChars(12);
         assert.equal(x.length,12);
-        console.log("Random characters", x);
+        TraceUtils.log("Random characters", x);
         for (let i = 1; i <= 10; i++) {
-            console.log("#" + i, RandomUtils.randomChars(12));
+            TraceUtils.log("#" + i, RandomUtils.randomChars(12));
         }
-        let y = RandomUtils.randomInt(0,10);
-        console.log("Random int", y);
+        const y = RandomUtils.randomInt(0,10);
+        TraceUtils.log("Random int", y);
         assert.isOk((y>=0) && (y<=10), "Invalid random int");
 
-        let z = RandomUtils.randomHex(6);
-        console.log("Random hex", z);
+        const z = RandomUtils.randomHex(6);
+        TraceUtils.log("Random hex", z);
         for (let i = 1; i <= 10; i++) {
-            console.log("#" + i, RandomUtils.randomHex(6));
+            TraceUtils.log("#" + i, RandomUtils.randomHex(6));
         }
         assert.isOk(/^[0-9a-fA-F]+$/i.test(z), "Invalid random hex");
 
     });
 
-    it('should use LangUtils.getFunctionParams', ()=> {
-        const params = LangUtils.getFunctionParams(function(a,b) {
+    it("should use LangUtils.getFunctionParams", ()=> {
+        const params = LangUtils.getFunctionParams((a,b)=> {
             //
         });
         assert.equal(params.length,2);
@@ -158,46 +156,60 @@ describe('test common errors', () => {
         assert.equal(params[1],"b");
     });
 
-    it('should use LangUtils.convert', ()=> {
+    it("should use LangUtils.convert", ()=> {
         let x = LangUtils.parseValue("true");
-        assert.isOk(typeof x === 'boolean', "Expected boolean");
+        assert.isOk(typeof x === "boolean", "Expected boolean");
         x = LangUtils.parseValue("12.4");
-        assert.isOk(typeof x === 'number', "Expected number");
+        assert.isOk(typeof x === "number", "Expected number");
         x = LangUtils.parseValue("2017-12-22");
         assert.isOk(x instanceof Date, "Expected date");
     });
 
-    it('should use LangUtils.parseForm', ()=> {
-        let x = LangUtils.parseForm({
+    it("should use LangUtils.parseForm", ()=> {
+        const x = LangUtils.parseForm({
             "user[name]":"user1",
             "user[password]":"pass",
-            "user[rememberMe]":"true"
+            "user[rememberMe]":"true",
         });
         assert.isOk(x.hasOwnProperty("user"),"User property is missing");
-        console.log("Data", x);
+        TraceUtils.log("Data", x);
     });
 
-    it('should use LangUtils.parseForm with options', ()=> {
-        let x = LangUtils.parseForm({
+    interface IUserForm {
+        user:IUser;
+    }
+
+    interface IUserOptions {
+        rememberMe:true;
+    }
+
+    interface IUser {
+        name: string;
+        password: string;
+        options?: IUserOptions;
+    }
+
+    it("should use LangUtils.parseForm with options", ()=> {
+        const x = LangUtils.parseForm({
             "user[name]":"user1",
             "user[password]":"pass",
-            "user[options][rememberMe]":"true"
+            "user[options][rememberMe]":"true",
         }, {
-            convertValues:true
+            convertValues:true,
         });
         assert.isOk(x.hasOwnProperty("user"),"User property is missing");
-        assert.isOk(typeof x["user"]["options"]["rememberMe"] === 'boolean',"Invalid property value");
-        console.log("Data", x);
+        assert.isOk(typeof (x as IUserForm).user.options.rememberMe === "boolean","Invalid property value");
+        TraceUtils.log("Data", x);
     });
 
-    it('should use PathUtils.join', ()=> {
-        const joined = PathUtils.join(__dirname, 'test-utils.ts');
-        console.log(joined);
+    it("should use PathUtils.join", ()=> {
+        const joined = PathUtils.join(__dirname, "test-utils.ts");
+        TraceUtils.log(joined);
         assert.isOk(/test-utils.ts$/.test(joined));
 
     });
 
-    it('should use TraceUtils', ()=> {
+    it("should use TraceUtils", ()=> {
         TraceUtils.logger.level("debug");
         TraceUtils.log("GivenName:%s, FamilyName:%s", "Peter", "Thomas");
         TraceUtils.info("GivenName:%s, FamilyName:%s", "Peter", "Thomas");

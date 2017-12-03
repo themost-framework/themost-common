@@ -166,7 +166,7 @@ var ConfigurationBase = /** @class */ (function () {
      * @returns {Object|Array}
      */
     ConfigurationBase.prototype.getSourceAt = function (p) {
-        return _.at(this[configProperty], p.replace(/\//, "."))[0];
+        return _.at(this[configProperty], p.replace(/\//g, "."))[0];
     };
     /**
      * Returns a boolean which indicates whether the specified  object path exists or not (e.g. settings.auth.cookieName or settings/auth/cookieName)
@@ -174,7 +174,7 @@ var ConfigurationBase = /** @class */ (function () {
      * @returns {boolean}
      */
     ConfigurationBase.prototype.hasSourceAt = function (p) {
-        return _.isObject(_.at(this[configProperty], p.replace(/\//, "."))[0]);
+        return _.isObject(_.at(this[configProperty], p.replace(/\//g, "."))[0]);
     };
     /**
      * Sets the config value to the specified object path (e.g. settings.auth.cookieName or settings/auth/cookieName)
@@ -183,7 +183,7 @@ var ConfigurationBase = /** @class */ (function () {
      * @returns {Object}
      */
     ConfigurationBase.prototype.setSourceAt = function (p, value) {
-        return _.set(this[configProperty], p, value);
+        return _.set(this[configProperty], p.replace(/\//g, "."), value);
     };
     /**
      * Sets the current execution path
