@@ -7,8 +7,8 @@ import {TraceUtils} from "../utils";
 describe("test sequential event emitter", () => {
 
     class Messenger extends SequentialEventEmitter {
-        public send(to, message) {
-            return Promise<any>((resolve, reject) => {
+        send(to, message) {
+            return new Promise((resolve, reject) => {
                 this.emit("message.new", to, message, (err) => {
                     if (err) {
                         return reject(err);

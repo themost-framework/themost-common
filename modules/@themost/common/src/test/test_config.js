@@ -10,7 +10,7 @@ import {assert} from "chai";
 import {join} from "path";
 import "source-map-support/register";
 import {ConfigurationBase} from "../config";
-import {PathUtils, TraceUtils} from "../utils";
+import {PathUtils} from "../utils";
 describe("test configuration", ()=> {
 
     it("should create new configuration", ()=> {

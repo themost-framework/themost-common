@@ -414,11 +414,10 @@ export class LangUtils {
         }
         return result;
     }
-
     /**
      * Parses HTTP form formatted values (e.g. "user[name]", user[password], user[options][rememberMe] etc ) and returns the equivalent native object
      * @param {*} form
-     * @param {*} options
+     * @param {*=} options
      * @returns {*}
      * @example
      *

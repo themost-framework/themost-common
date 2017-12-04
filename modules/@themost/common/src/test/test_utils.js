@@ -47,7 +47,7 @@ describe("test common errors", () => {
 
         assert.doesNotThrow(()=> {
             const a = ()=> {
-                return;
+                //
             };
             Args.notFunction(a,"Argument");
         });
@@ -90,17 +90,17 @@ describe("test common errors", () => {
     });
 
     it("should use Base26 numbers", ()=> {
-       const x = Base26Number.toBase26(100);
-       assert.equal("wdaaaaaa",x);
-       const y = new Base26Number(100);
-       assert.equal(y.toString(),"wdaaaaaa");
-       assert.equal(Base26Number.fromBase26("wdaaaaaa"),100);
+        const x = Base26Number.toBase26(100);
+        assert.equal("wdaaaaaa",x);
+        const y = new Base26Number(100);
+        assert.equal(y.toString(),"wdaaaaaa");
+        assert.equal(Base26Number.fromBase26("wdaaaaaa"),100);
     });
 
     it("should use TextUtils.toMD5", ()=> {
-       const x = TextUtils.toMD5("Hello");
-       assert.equal(x,"8b1a9953c4611296a827abf8c47804d7");
-       TraceUtils.log("MD5", "Hello", x);
+        const x = TextUtils.toMD5("Hello");
+        assert.equal(x,"8b1a9953c4611296a827abf8c47804d7");
+        TraceUtils.log("MD5", "Hello", x);
     });
 
     it("should use TextUtils.toSHA1", ()=> {
@@ -149,7 +149,7 @@ describe("test common errors", () => {
 
     it("should use LangUtils.getFunctionParams", ()=> {
         const params = LangUtils.getFunctionParams((a,b)=> {
-            //
+            return a+b;
         });
         assert.equal(params.length,2);
         assert.equal(params[0],"a");
@@ -175,20 +175,6 @@ describe("test common errors", () => {
         TraceUtils.log("Data", x);
     });
 
-    interface IUserForm {
-        user:IUser;
-    }
-
-    interface IUserOptions {
-        rememberMe:true;
-    }
-
-    interface IUser {
-        name: string;
-        password: string;
-        options?: IUserOptions;
-    }
-
     it("should use LangUtils.parseForm with options", ()=> {
         const x = LangUtils.parseForm({
             "user[name]":"user1",
@@ -198,7 +184,7 @@ describe("test common errors", () => {
             convertValues:true,
         });
         assert.isOk(x.hasOwnProperty("user"),"User property is missing");
-        assert.isOk(typeof (x as IUserForm).user.options.rememberMe === "boolean","Invalid property value");
+        assert.isOk(typeof (x).user.options.rememberMe === "boolean","Invalid property value");
         TraceUtils.log("Data", x);
     });
 

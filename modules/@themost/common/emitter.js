@@ -223,5 +223,4 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
 
     return SequentialEventEmitter;
 }(EventEmitter);
-
 //# sourceMappingURL=emitter.js.map

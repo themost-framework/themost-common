@@ -549,11 +549,10 @@ var LangUtils = exports.LangUtils = function () {
             }
             return result;
         }
-
         /**
          * Parses HTTP form formatted values (e.g. "user[name]", user[password], user[options][rememberMe] etc ) and returns the equivalent native object
          * @param {*} form
-         * @param {*} options
+         * @param {*=} options
          * @returns {*}
          * @example
          *
@@ -707,7 +706,7 @@ var LangUtils = exports.LangUtils = function () {
          * @param {*} origin
          * @param {string} expr
          * @param {string} value
-         * @param {IConvertOptions=} options
+         * @param {*=} options
          * @returns {*}
          */
 
