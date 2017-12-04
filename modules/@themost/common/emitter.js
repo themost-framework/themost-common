@@ -96,7 +96,6 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
             //apply each series
             return applyEachSeries.apply(this, [listeners].concat(argsAndCallback));
         }
-
         /**
          * @param {string|symbol} event
          * @param {Function} listener
@@ -224,4 +223,5 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
 
     return SequentialEventEmitter;
 }(EventEmitter);
+
 //# sourceMappingURL=emitter.js.map

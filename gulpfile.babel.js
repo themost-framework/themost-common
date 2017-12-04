@@ -23,7 +23,6 @@ function build(files, base) {
             .pipe(sourcemaps.init())
             .pipe(babel())
             .pipe(sourcemaps.write('.'))
-            //  .pipe(bundleTimer)
             .pipe(gulp.dest(base));
     }
 }

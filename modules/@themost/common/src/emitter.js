@@ -56,7 +56,6 @@ export class SequentialEventEmitter extends EventEmitter {
         //apply each series
         return applyEachSeries.apply(this, [listeners].concat(argsAndCallback));
     }
-
     /**
      * @param {string|symbol} event
      * @param {Function} listener
