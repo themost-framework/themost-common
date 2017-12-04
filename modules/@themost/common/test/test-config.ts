@@ -8,9 +8,11 @@
  */
 import {assert} from "chai";
 import {join} from "path";
+import "source-map-support/register";
 import {ConfigurationBase} from "../config";
-import {PathUtils} from "../utils";
+import {PathUtils, TraceUtils} from "../utils";
 describe("test configuration", ()=> {
+
     it("should create new configuration", ()=> {
         const config = new ConfigurationBase(PathUtils.join(__dirname,"config"));
         assert.equal(config.getConfigurationPath(), join(__dirname,"config"));

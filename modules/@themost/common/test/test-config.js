@@ -10,6 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var chai_1 = require("chai");
 var path_1 = require("path");
+require("source-map-support/register");
 var config_1 = require("../config");
 var utils_1 = require("../utils");
 describe("test configuration", function () {

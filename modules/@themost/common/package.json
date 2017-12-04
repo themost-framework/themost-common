@@ -1,6 +1,6 @@
 {
   "name": "@themost/common",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "MOST Web Framework 2.0 - Common Module",
   "module": "index.js",
   "peerDependencies": {},
@@ -19,13 +19,11 @@
     "blueimp-md5": "^2.10.0",
     "events": "^1.1.1",
     "sprintf": "^0.1.5",
-    "symbol": "^0.3.1"
+    "symbol": "^0.3.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@types/async": "^2.0.45",
-    "@types/blueimp-md5": "^2.7.0",
     "@types/chai": "^4.0.6",
-    "@types/lodash": "^4.14.86",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.53",
     "@types/q": "^1.0.6",
@@ -34,5 +32,28 @@
     "mocha": "^4.0.1",
     "q": "^1.5.1",
     "source-map-support": "^0.5.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "overrides": [
+      {
+        "files": [
+          "**/*.es6.js"
+        ]
+      }
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jquery": true
+    },
+    "globals": {
+      "describe": false,
+      "it": false,
+      "before": false,
+      "after": false
+    },
+    "extends": "eslint:recommended"
   }
 }

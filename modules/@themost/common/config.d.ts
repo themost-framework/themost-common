@@ -7,13 +7,14 @@ export declare class ConfigurationBase {
      * Gets the current configuration
      * @returns ConfigurationBase - An instance of DataConfiguration class which represents the current data configuration
      */
-    static getCurrent(): ConfigurationBase;
+    public static getCurrent(): ConfigurationBase;
     /**
      * Sets the current configuration
      * @param {ConfigurationBase} configuration
      * @returns ConfigurationBase - An instance of ApplicationConfiguration class which represents the current configuration
      */
-    static setCurrent(configuration: ConfigurationBase): any;
+    public static setCurrent(configuration: ConfigurationBase): any;
+    public readonly settings: any;
     /**
      * @constructor
      * @param {string=} configPath
@@ -25,58 +26,57 @@ export declare class ConfigurationBase {
      * @param {Function|*} strategyCtor
      * @returns ConfigurationBase
      */
-    useStrategy(configStrategyCtor: any, strategyCtor: any): this;
+    public useStrategy(configStrategyCtor: any, strategyCtor: any): this;
     /**
      * Gets a configuration strategy
      * @param {Function|*} configStrategyCtor
      * @returns {ConfigurationStrategy|*}
      */
-    getStrategy(configStrategyCtor: any): any;
+    public getStrategy(configStrategyCtor: any): any;
     /**
      * Gets a configuration strategy
      * @param {Function} configStrategyCtor
      */
-    hasStrategy(configStrategyCtor: any): boolean;
-    readonly settings: any;
+    public hasStrategy(configStrategyCtor: any): boolean;
     /**
      * Returns the configuration source object
      * @returns {*}
      */
-    getSource(): any;
+    public getSource(): any;
     /**
      * Returns the source configuration object based on the given path (e.g. settings.auth.cookieName or settings/auth/cookieName)
      * @param {string} p - A string which represents an object path
      * @returns {Object|Array}
      */
-    getSourceAt(p: string): any;
+    public getSourceAt(p: string): any;
     /**
      * Returns a boolean which indicates whether the specified  object path exists or not (e.g. settings.auth.cookieName or settings/auth/cookieName)
      * @param {string} p - A string which represents an object path
      * @returns {boolean}
      */
-    hasSourceAt(p: string): boolean;
+    public hasSourceAt(p: string): boolean;
     /**
      * Sets the config value to the specified object path (e.g. settings.auth.cookieName or settings/auth/cookieName)
      * @param {string} p - A string which represents an object path
      * @param {*} value
      * @returns {Object}
      */
-    setSourceAt(p: any, value: any): any;
+    public setSourceAt(p: any, value: any): any;
     /**
      * Sets the current execution path
      * @param {string} p
      */
-    setExecutionPath(p: string): ConfigurationBase;
+    public setExecutionPath(p: string): ConfigurationBase;
     /**
      * Gets the current execution path
      * @returns {string}
      */
-    getExecutionPath(): string;
+    public getExecutionPath(): string;
     /**
      * Gets the current configuration path
      * @returns {string}
      */
-    getConfigurationPath(): string;
+    public getConfigurationPath(): string;
 }
 /**
  * @class
@@ -90,7 +90,7 @@ export declare class ConfigurationStrategy {
     /**
      * @returns {ConfigurationBase}
      */
-    getConfiguration(): ConfigurationBase;
+    public getConfiguration(): ConfigurationBase;
 }
 export declare class ModuleLoaderStrategy extends ConfigurationStrategy {
     /**
@@ -102,7 +102,7 @@ export declare class ModuleLoaderStrategy extends ConfigurationStrategy {
      * @param {string} modulePath
      * @returns {*}
      */
-    require(modulePath: any): any;
+    public require(modulePath: any): any;
 }
 export declare class DefaultModuleLoaderStrategy extends ModuleLoaderStrategy {
     /**

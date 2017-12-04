@@ -6,8 +6,8 @@
  * Use of this source code is governed by an BSD-3-Clause license that can be
  * found in the LICENSE file at https://themost.io/license
  */
-import blueimp = require("blueimp-md5");
-import * as _ from "lodash";
+import blueimp from "blueimp-md5";
+import _ from "lodash";
 import {sprintf} from "sprintf";
 import {ArgumentError} from "./errors";
 
@@ -20,8 +20,8 @@ const BooleanTrueRegex = /^true$/ig;
 const BooleanFalseRegex = /^false$/ig;
 const NullRegex = /^null$/ig;
 const UndefinedRegex = /^undefined$/ig;
-const IntegerRegex =/^[-+]?\d+$/g;
-const FloatRegex =/^[+-]?\d+(\.\d+)?$/g;
+const IntegerRegex = /^[-+]?\d+$/g;
+const FloatRegex = /^[+-]?\d+(\.\d+)?$/g;
 const GuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
 
 function isNode() {
@@ -37,8 +37,8 @@ export class Args {
      * @param {*} expr
      * @param {string|Error} err
      */
-    public static check(expr:any, err:string|Error) {
-        Args.notNull(expr,"Expression");
+    static check(expr, err) {
+        Args.notNull(expr, "Expression");
         if (typeof expr === "function") {
             expr.call();
         }
@@ -61,7 +61,7 @@ export class Args {
      * @param {*} arg
      * @param {string} name
      */
-    public static notNull(arg:any, name:string) {
+    static notNull(arg, name) {
         if (typeof arg === "undefined" || arg === null) {
             throw new ArgumentError(name + " may not be null or undefined", "ENULL");
         }
@@ -71,7 +71,7 @@ export class Args {
      * @param {*} arg
      * @param {string} name
      */
-    public static notString(arg:any, name:string) {
+    static notString(arg, name) {
         if (typeof arg !== "string") {
             throw new ArgumentError(name + " must be a string");
         }
@@ -81,7 +81,7 @@ export class Args {
      * @param {*} arg
      * @param {string} name
      */
-    public static notFunction(arg:any, name:string) {
+    static notFunction(arg, name) {
         if (typeof arg !== "function") {
             throw new ArgumentError(name + " must be a function");
         }
@@ -91,7 +91,7 @@ export class Args {
      * @param {*} arg
      * @param {string} name
      */
-    public static notNumber(arg:any, name:string) {
+    static notNumber(arg, name) {
         if (typeof arg !== "number") {
             throw new ArgumentError(name + " must be number");
         }
@@ -101,9 +101,9 @@ export class Args {
      * @param {string|*} arg
      * @param {string} name
      */
-    public static notEmpty(arg, name) {
-        Args.notNull(arg,name);
-        Args.notString(arg,name);
+    static notEmpty(arg, name) {
+        Args.notNull(arg, name);
+        Args.notString(arg, name);
         if (arg.length === 0) {
             throw new ArgumentError(name + " may not be empty", "EEMPTY");
         }
@@ -113,9 +113,9 @@ export class Args {
      * @param {number|*} arg
      * @param {string} name
      */
-    public static notNegative(arg, name) {
-        Args.notNumber(arg,name);
-        if (arg<0) {
+    static notNegative(arg, name) {
+        Args.notNumber(arg, name);
+        if (arg < 0) {
             throw new ArgumentError(name + " may not be negative", "ENEG");
         }
     }
@@ -124,9 +124,9 @@ export class Args {
      * @param {number|*} arg
      * @param {string} name
      */
-    public static notPositive(arg, name) {
-        Args.notNumber(arg,name);
-        if (arg<=0) {
+    static notPositive(arg, name) {
+        Args.notNumber(arg, name);
+        if (arg <= 0) {
             throw new ArgumentError(name + " may not be negative or zero", "EPOS");
         }
     }
@@ -134,18 +134,18 @@ export class Args {
 
 export class Base26Number {
 
-    public static toBase26(x:number):string {
+    static toBase26(x) {
         let num = Math.floor(x | 0);
-        if (num<0) {
+        if (num < 0) {
             throw new Error("A non-positive integer cannot be converted to base-26 format.");
         }
-        if (num>208827064575) {
+        if (num > 208827064575) {
             throw new Error("A positive integer bigger than 208827064575 cannot be converted to base-26 format.");
         }
         let out = "";
-        let length= 1;
+        let length = 1;
         const a = "a".charCodeAt(0);
-        while(length<=8) {
+        while (length <= 8) {
             out += String.fromCharCode(a + (num % 26));
             num = Math.floor(num / 26);
             length += 1;
@@ -153,25 +153,23 @@ export class Base26Number {
         return out;
     }
 
-    public static fromBase26(s:string):number {
+    static fromBase26(s) {
         let num = 0;
         if (!/[a-z]{8}/.test(s)) {
             throw new Error("Invalid base-26 format.");
         }
         const a = "a".charCodeAt(0);
-        for (let i = 7; i >=0; i--) {
+        for (let i = 7; i >= 0; i--) {
             num = (num * 26) + (s[i].charCodeAt(0) - a);
         }
         return num;
     }
 
-    private value:number;
-
     constructor(value) {
         this.value = value;
     }
 
-    public toString() {
+    toString() {
         return Base26Number.toBase26(this.value);
     }
 
@@ -184,7 +182,7 @@ export class TextUtils {
      * @param {*} value
      * @returns {string|undefined}
      */
-    public static toMD5(value:any):string {
+    static toMD5(value) {
 
         if (typeof value === "undefined" || value === null) {
             return;
@@ -222,9 +220,9 @@ export class TextUtils {
      * @param {*} value
      * @returns {string|undefined}
      */
-    public static toSHA1(value:any):string {
+    static toSHA1(value) {
 
-        Args.check(isNode(),"This method is not implemented for this environment");
+        Args.check(isNode(), "This method is not implemented for this environment");
 
         const crypto = require("crypto");
         if (typeof value === "undefined" || value === null) {
@@ -247,9 +245,9 @@ export class TextUtils {
      * @param {*} value
      * @returns {string|undefined}
      */
-    public static toSHA256(value:any):string {
+    static toSHA256(value) {
 
-        Args.check(isNode(),"This method is not implemented for this environment");
+        Args.check(isNode(), "This method is not implemented for this environment");
 
         const crypto = require("crypto");
         if (typeof value === "undefined" || value === null) {
@@ -271,7 +269,7 @@ export class TextUtils {
      * @static
      * @returns {string}
      */
-    public static newUUID():string {
+    static newUUID() {
         const chars = UUID_CHARS;
         const uuid = [];
         // rfc4122, version 4 form
@@ -284,7 +282,7 @@ export class TextUtils {
         // per rfc4122, sec. 4.1.5
         for (let i = 0; i < 36; i++) {
             if (!uuid[i]) {
-                r = 0 | Math.random()*16;
+                r = 0 | Math.random() * 16;
                 uuid[i] = chars[(i === 19) ? (r & 0x3) | 0x8 : r];
             }
         }
@@ -300,50 +298,52 @@ export class Guid {
      * @param {string} s
      * @returns {boolean}
      */
-    public static isGuid(s:string):boolean {
+    static isGuid(s) {
         if (typeof s !== "string") {
             return false;
         }
         return GuidRegex.test(s);
     }
+
     /**
      * @returns {Guid}
      */
-    public static newGuid():Guid {
+    static newGuid() {
         return new Guid();
     }
 
-    private value:string;
-
     /**
      * @constructor
-     * @param {string} value
+     * @param {string=} value
      */
-    constructor(value?:string) {
+    constructor(value) {
         if (typeof value === "string") {
-            const test = value.replace(/^{/,"").replace(/{$/,"");
-            Args.check(GuidRegex.test(test),"Value must be a valid UUID");
+            const test = value.replace(/^{/, "").replace(/{$/, "");
+            Args.check(GuidRegex.test(test), "Value must be a valid UUID");
             this.value = test;
             return;
         }
         this.value = TextUtils.newUUID();
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * @returns {string}
      */
-    public toString() {
+    toString() {
         return this.value;
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * @returns {string}
      */
-    public valueOf() {
+    valueOf() {
         return this.value;
     }
+
 //noinspection JSUnusedGlobalSymbols
-    public toJSON() {
+    toJSON() {
         return this.value;
     }
 
@@ -357,12 +357,12 @@ export class RandomUtils {
      * Returns a random string based on the length specified
      * @param {Number} length
      */
-    public static randomChars(length:number):string {
+    static randomChars(length) {
         length = length || 8;
         const chars = "abcdefghkmnopqursuvwxz2456789ABCDEFHJKLMNPQURSTUVWXYZ";
         let str = "";
-        for(let i = 0; i < length; i++) {
-            str += chars.substr(this.randomInt(0, chars.length-1),1);
+        for (let i = 0; i < length; i++) {
+            str += chars.substr(this.randomInt(0, chars.length - 1), 1);
         }
         return str;
     }
@@ -372,7 +372,7 @@ export class RandomUtils {
      * @param {number} min
      * @param {number} max
      */
-    public static randomInt(min:number, max:number):number {
+    static randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
@@ -382,19 +382,16 @@ export class RandomUtils {
      * @param {number} length
      * @returns {string}
      */
-    public static randomHex(length:number):string {
-        length = (length || 8)*2;
+    static randomHex(length) {
+        length = (length || 8) * 2;
         let str = "";
-        for(let i = 0; i < length; i++) {
-            str += HEX_CHARS.substr(this.randomInt(0, HEX_CHARS.length-1),1);
+        for (let i = 0; i < length; i++) {
+            str += HEX_CHARS.substr(this.randomInt(0, HEX_CHARS.length - 1), 1);
         }
         return str;
     }
 }
 
-export interface IConvertOptions {
-    convertValues:boolean;
-}
 
 /**
  * @class
@@ -406,17 +403,18 @@ export class LangUtils {
      * @param {Function} fn
      * @returns {Array}
      */
-    public static getFunctionParams(fn) {
+    static getFunctionParams(fn) {
         if (!_.isFunction(fn)) {
             return [];
         }
         const fnStr = fn.toString().replace(STRIP_COMMENTS, "");
-        let result = fnStr.slice(fnStr.indexOf("(")+1, fnStr.indexOf(")")).match(/([^\s,]+)/g);
-        if(result === null) {
+        let result = fnStr.slice(fnStr.indexOf("(") + 1, fnStr.indexOf(")")).match(/([^\s,]+)/g);
+        if (result === null) {
             result = [];
         }
         return result;
     }
+
     /**
      * Parses HTTP form formatted values (e.g. "user[name]", user[password], user[options][rememberMe] etc ) and returns the equivalent native object
      * @param {*} form
@@ -425,9 +423,9 @@ export class LangUtils {
      * @example
      *
      */
-    public static parseForm(form, options?:IConvertOptions) {
+    static parseForm(form, options) {
         const result = {};
-        if (typeof form === "undefined" || form===null) {
+        if (typeof form === "undefined" || form === null) {
             return result;
         }
         const keys = Object.keys(form);
@@ -438,71 +436,76 @@ export class LangUtils {
         });
         return result;
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * Parses value value or string and returns the resulted object.
      * @param {*} value
      * @returns {*}
      */
-    public static parseValue(value:any):any {
+    static parseValue(value) {
         return LangUtils.convert(value);
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * Parses value value and returns the equivalent integer.
      * @param {*} value
      * @returns {*}
      */
-    public static parseInt(value:any) {
-        return parseInt(value,10) || 0;
+    static parseInt(value) {
+        return parseInt(value, 10) || 0;
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * Parses value value and returns the equivalent float number.
      * @param {*} value
      * @returns {*}
      */
-    public static parseFloat(value:any) {
+    static parseFloat(value) {
         return parseFloat(value) || 0;
     }
+
 //noinspection JSUnusedGlobalSymbols
     /**
      * Parses value value and returns the equivalent boolean.
      * @param {*} value
      * @returns {*}
      */
-    public static parseBoolean(value:any) {
+    static parseBoolean(value) {
         if (typeof value === "undefined" || value === null) {
             return false;
         } else if (typeof value === "number") {
             return value !== 0;
-             } else if (typeof value === "string") {
+        } else if (typeof value === "string") {
             if (value.match(IntegerRegex) || value.match(FloatRegex)) {
                 return parseInt(value, 10) !== 0;
             } else if (value.match(BooleanTrueRegex)) {
                 return true;
-                 } else if (value.match(BooleanFalseRegex)) {
+            } else if (value.match(BooleanFalseRegex)) {
                 return false;
-                 } else if (/^yes$|^on$|^y$|^valid$/i.test(value)) {
+            } else if (/^yes$|^on$|^y$|^valid$/i.test(value)) {
                 return true;
-                 } else if (/^no$|^off$|^n$|^invalid$/i.test(value)) {
+            } else if (/^no$|^off$|^n$|^invalid$/i.test(value)) {
                 return false;
-                 } else {
+            } else {
                 return false;
-                 }
+            }
         } else if (typeof value === "boolean") {
             return value;
-             } else {
-            return (parseInt(value,10) || 0) !== 0;
+        } else {
+            return (parseInt(value, 10) || 0) !== 0;
         }
     }
+
     /**
      * @param {string} value
      */
-    private static convert(value) {
+    static convert(value) {
         let result;
         if ((typeof value === "string")) {
-            if (value.length===0) {
+            if (value.length === 0) {
                 result = value;
             }
             if (value.match(BooleanTrueRegex)) {
@@ -512,7 +515,7 @@ export class LangUtils {
             } else if (value.match(NullRegex) || value.match(UndefinedRegex)) {
                 result = null;
             } else if (value.match(IntegerRegex)) {
-                result = parseInt(value,10);
+                result = parseInt(value, 10);
             } else if (value.match(FloatRegex)) {
                 result = parseFloat(value);
             } else if (value.match(DateTimeRegex)) {
@@ -534,9 +537,9 @@ export class LangUtils {
      * @param {IConvertOptions=} options
      * @returns {*}
      */
-    private static extend(origin:any, expr:string, value:string, options?:IConvertOptions) {
+    static extend(origin, expr, value, options) {
 
-        options = options || { convertValues:false };
+        options = options || {convertValues: false};
         //find base notation
         let match = /(^\w+)\[/.exec(expr);
         let name;
@@ -562,7 +565,7 @@ export class LangUtils {
                 expr1 = expr.substr(match.index + match[1].length);
                 LangUtils.extend(descriptor, expr1, value, options);
             }
-        } else if (expr.indexOf("[")===0) {
+        } else if (expr.indexOf("[") === 0) {
             //get property
             const re = /\[(.*?)]/g;
             match = re.exec(expr);
@@ -594,7 +597,7 @@ export class LangUtils {
                     }
                 } else {
                     if (origin.value instanceof LangUtils) {
-                        origin.value = { };
+                        origin.value = {};
                     }
                     origin.value[name] = origin.value[name] || new LangUtils();
                     descriptor = new UnknownPropertyDescriptor(origin.value, name);
@@ -624,8 +627,18 @@ export class LangUtils {
  */
 class UnknownPropertyDescriptor {
     constructor(obj, name) {
-        Object.defineProperty(this, "value", { configurable:false, enumerable:true, get() { return obj[name]; }, set(value) { obj[name]=value; } });
-        Object.defineProperty(this, "name", { configurable:false, enumerable:true, get() { return name; } });
+        Object.defineProperty(this, "value", {
+            configurable: false, enumerable: true, get() {
+                return obj[name];
+            }, set(value) {
+                obj[name] = value;
+            }
+        });
+        Object.defineProperty(this, "name", {
+            configurable: false, enumerable: true, get() {
+                return name;
+            }
+        });
     }
 }
 
@@ -638,7 +651,7 @@ export class PathUtils {
      * @param {...string} part
      * @returns {string}
      */
-    public static join(...part):string {
+    static join(...part) {
         let parts;
         let i;
         let l;
@@ -650,7 +663,7 @@ export class PathUtils {
         // Split the inputs into a list of path commands.
         parts = [];
         for (i = 0, l = arguments.length; i < l; i++) {
-            parts = parts.concat(arguments[i].replace(/\\/g,"/").split("/"));
+            parts = parts.concat(arguments[i].replace(/\\/g, "/").split("/"));
         }
         // Interpret the path commands to get the new resolved path.
         const newParts = [];
@@ -658,41 +671,25 @@ export class PathUtils {
             const part1 = parts[i];
             // Remove leading and trailing slashes
             // Also remove "." segments
-            if (!part1 || part1 === ".") { continue; }
+            if (!part1 || part1 === ".") {
+                continue;
+            }
             // Interpret ".." to pop the last segment
-            if (part1 === "..") { newParts.pop(); } else { newParts.push(part1); }
+            if (part1 === "..") {
+                newParts.pop();
+            } else {
+                newParts.push(part1);
+            }
         }
         // Preserve the initial slash if there was one.
-        if (parts[0] === "") { newParts.unshift(""); }
+        if (parts[0] === "") {
+            newParts.unshift("");
+        }
         // Turn back into a single string path.
         return newParts.join("/") || (newParts.length ? "/" : ".");
     }
 }
 
-export interface ITraceLogger {
-
-    level(level:string):ITraceLogger;
-    /**
-     * @param {...*} data
-     */
-    log(...data);
-    /**
-     * @param {...*} data
-     */
-    info(...data);
-    /**
-     * @param {...*} data
-     */
-    error(...data);
-    /**
-     * @param {...*} data
-     */
-    warn(...data);
-    /**
-     * @param {...*} data
-     */
-    debug(...data);
-}
 const Reset = "\x1b[0m";
 const FgBlack = "\x1b[30m";
 const FgRed = "\x1b[31m";
@@ -721,74 +718,70 @@ const LogLevelColors = {
     debug: Bold + FgGreen,
 };
 
-export interface ITraceLoggerOptions {
-    colors:boolean;
-    level:string;
-}
+/**
+ * extends ITraceLogger
+ */
+export class TraceLogger {
 
-export class TraceLogger implements ITraceLogger {
-
-    private options: ITraceLoggerOptions;
-
-    constructor(options?:ITraceLoggerOptions) {
+    constructor(options) {
         this.options = {
-            colors:true,
-            level:"info",
+            colors: true,
+            level: "info",
         };
         if (typeof options === "undefined" && options !== null && isNode()) {
             if (process.env.NODE_ENV === "development") {
                 this.options.level = "debug";
             }
         }
-        if (typeof options !== "undefined" && options !== null ) {
+        if (typeof options !== "undefined" && options !== null) {
             this.options = options;
             //validate logging level
             Args.check(LogLevels.hasOwnProperty(this.options.level), "Invalid logging level. Expected error, warn, info, verbose or debug.");
         }
     }
 
-    public level(level:string) {
+    level(level) {
         Args.check(LogLevels.hasOwnProperty(level), "Invalid logging level. Expected error, warn, info, verbose or debug.");
         this.options.level = level;
         return this;
     }
 
-    public log(...data: any[]) {
+    log(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("info", sprintf.apply(null, args));
     }
 
-    public info(...data: any[]) {
+    info(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("info", sprintf.apply(null, args));
     }
 
-    public error(...data: any[]) {
+    error(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("error", sprintf.apply(null, args));
     }
 
-    public warn(...data: any[]) {
+    warn(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("warn", sprintf.apply(null, args));
     }
 
-    public verbose(...data: any[]) {
+    verbose(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("verbose", sprintf.apply(null, args));
     }
 
-    public debug(...data: any[]) {
+    debug(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("debug", sprintf.apply(null, args));
     }
 
-    private timestamp():string {
+    timestamp() {
         return (new Date()).toUTCString();
     }
 
-    private write(level:string, text:string) {
-        if (LogLevels[level]>LogLevels[this.options.level]) {
+    write(level, text) {
+        if (LogLevels[level] > LogLevels[this.options.level]) {
             return;
         }
         /* tslint:disable:no-console */
@@ -804,9 +797,8 @@ export class TraceLogger implements ITraceLogger {
 
 export class TraceUtils {
 
-    public static logger:ITraceLogger;
 
-    public static useLogger(logger:ITraceLogger) {
+    static useLogger(logger) {
         TraceUtils.logger = logger;
     }
 
@@ -814,7 +806,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
-    public static log(...data) {
+    static log(...data) {
         TraceUtils.logger.log.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
 
@@ -822,7 +814,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
-    public static error(...data) {
+    static error(...data) {
         TraceUtils.logger.error.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
 
@@ -831,7 +823,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
-    public static info(...data) {
+    static info(...data) {
         TraceUtils.logger.info.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
 
@@ -840,7 +832,7 @@ export class TraceUtils {
      * @static
      * @param {*} data
      */
-    public static warn(...data) {
+    static warn(...data) {
         TraceUtils.logger.warn.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
 
@@ -849,7 +841,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
-    public static debug(...data) {
+    static debug(...data) {
         TraceUtils.logger.debug.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
 }

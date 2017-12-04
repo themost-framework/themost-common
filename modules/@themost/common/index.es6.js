@@ -9,3 +9,4 @@
 export * from "./emitter";
 export * from "./errors";
 export * from "./utils";
+export * from "./config";

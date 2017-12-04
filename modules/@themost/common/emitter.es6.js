@@ -8,10 +8,9 @@
  */
 import {applyEachSeries} from "async";
 import {EventEmitter} from "events";
-import * as Symbol from "symbol";
+import Symbol from "symbol";
 const listenersProperty = "listeners";
 const listenerProperty = Symbol("listener");
-
 /**
  * @class
  * @extends EventEmitter
@@ -29,9 +28,9 @@ export class SequentialEventEmitter extends EventEmitter {
      * Emits an event by specifying additional arguments where the last argument is a callback function
      * @param {string | symbol} event
      * @param args
-     * @returns {any}
+     * @returns {*}
      */
-    public emit(event: string|symbol, ...args: any[]) {
+    emit(event, ...args) {
         //get listeners
         if (typeof this[listenersProperty] !== "function") {
             throw new Error("undefined listeners");
@@ -57,56 +56,97 @@ export class SequentialEventEmitter extends EventEmitter {
         return applyEachSeries.apply(this, [listeners].concat(argsAndCallback));
     }
 
-    public addListener(event: string | symbol, listener: (...args: any[]) => void): this {
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @returns SequentialEventEmitter
+     */
+    addListener(event, listener) {
         return super.addListener(event, listener);
     }
-
-    public on(event: string | symbol, listener: (...args: any[]) => void): this {
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @returns SequentialEventEmitter
+     */
+    on(event, listener) {
         return super.on(event, listener);
     }
-
-    public prependListener(event: string | symbol, listener: (...args: any[]) => void): this {
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @returns SequentialEventEmitter
+     */
+    prependListener(event, listener) {
         return super.prependListener(event, listener);
     }
-
-    public prependOnceListener(event: string | symbol, listener: (...args: any[]) => void): this {
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @returns SequentialEventEmitter
+     */
+    prependOnceListener(event, listener) {
         return super.prependOnceListener(event, listener);
     }
-
-    public removeListener(event: string | symbol, listener: (...args: any[]) => void): this {
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @returns SequentialEventEmitter
+     */
+    removeListener(event, listener) {
         return super.removeListener(event, listener);
     }
+    /**
+     * @param {string|symbol} event
+     * @returns SequentialEventEmitter
+     */
+    removeAllListeners(event) {
+    return super.removeAllListeners(event);
+}
 
-    public removeAllListeners(event?: string | symbol): this {
-        return super.removeAllListeners(event);
-    }
+    /**
+     * @param {number} n
+     * @returns SequentialEventEmitter
+     */
+    setMaxListeners(n) {
+    return super.setMaxListeners(n);
+}
 
-    public setMaxListeners(n: number): this {
-        return super.setMaxListeners(n);
-    }
-    public getMaxListeners(): number {
-        return super.getMaxListeners();
-    }
+    /**
+     * @return {*|number}
+     */
+    getMaxListeners() {
+    return super.getMaxListeners();
+}
 
-    public listenerCount(type: string | symbol): number {
-        return super.listenerCount(type);
-    }
+    /**
+     * @param type
+     * @return {*|number}
+     */
+    listenerCount(type) {
+    return super.listenerCount(type);
+}
 
-    public once(type: string|symbol, listener: (...args: any[]) => void) {
-        const self = this as EventEmitter;
-        if (typeof listener !== "function") {
-            throw TypeError("listener must be a function");
+    /**
+     * @param {string|symbol} event
+     * @param {Function} listener
+     * @return {SequentialEventEmitter}
+     */
+    once(event, listener) {
+    const self = this;
+    if (typeof listener !== "function") {
+        throw TypeError("listener must be a function");
+    }
+    let fired = false;
+    function g() {
+        self.removeListener(event, g);
+        if (!fired) {
+            fired = true;
+            listener.apply(this, arguments);
         }
-        let fired = false;
-        function g() {
-            self.removeListener(type, g);
-            if (!fired) {
-                fired = true;
-                listener.apply(this, arguments);
-            }
-        }
-        g[listenerProperty] = listener;
-        self.on(type, g);
-        return this;
     }
+    g[listenerProperty] = listener;
+    self.on(event, g);
+    return this;
+}
 }

@@ -25,5 +25,5 @@ export declare class SequentialEventEmitter extends EventEmitter {
     setMaxListeners(n: number): this;
     getMaxListeners(): number;
     listenerCount(type: string | symbol): number;
-    once(type: string | symbol, listener: (...args: any[]) => void): this;
+    once(event: string | symbol, listener: (...args: any[]) => void): this;
 }
