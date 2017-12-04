@@ -25,11 +25,11 @@ var _symbol = require("symbol");
 
 var _Symbol = _interopRequireDefault(_symbol).default;
 
-var _errors = require("./errors");
+var _errors = require("../errors");
 
 var AbstractClassError = _errors.AbstractClassError;
 
-var _utils = require("./utils");
+var _utils = require("../utils");
 
 var Args = _utils.Args;
 var PathUtils = _utils.PathUtils;
@@ -377,5 +377,4 @@ var DefaultModuleLoaderStrategy = exports.DefaultModuleLoaderStrategy = function
 
     return DefaultModuleLoaderStrategy;
 }(ModuleLoaderStrategy);
-
 //# sourceMappingURL=config.js.map

@@ -52,4 +52,15 @@ Object.keys(_config).forEach(function (key) {
   });
 });
 
+var _html = require("./html");
+
+Object.keys(_html).forEach(function (key) {
+  if (key === "default") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _html[key];
+    }
+  });
+});
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,6 @@
 import {assert} from "chai";
 import {Promise} from "q";
+import "source-map-support/register";
 import {SequentialEventEmitter} from "../emitter";
 import {TraceUtils} from "../utils";
 

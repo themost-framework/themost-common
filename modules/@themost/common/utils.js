@@ -553,7 +553,7 @@ var LangUtils = exports.LangUtils = function () {
         /**
          * Parses HTTP form formatted values (e.g. "user[name]", user[password], user[options][rememberMe] etc ) and returns the equivalent native object
          * @param {*} form
-         * @param {IConvertOptions} options
+         * @param {*} options
          * @returns {*}
          * @example
          *
@@ -890,10 +890,13 @@ var Reset = "\x1b[0m";
 var FgBlack = "\x1b[30m";
 var FgRed = "\x1b[31m";
 var FgGreen = "\x1b[32m";
+// eslint-disable-next-line no-unused-vars
 var FgYellow = "\x1b[33m";
 var FgBlue = "\x1b[34m";
 var FgMagenta = "\x1b[35m";
+// eslint-disable-next-line no-unused-vars
 var FgCyan = "\x1b[36m";
+// eslint-disable-next-line no-unused-vars
 var FgWhite = "\x1b[37m";
 
 var Bold = "\x1b[1m";
@@ -937,6 +940,8 @@ var TraceLogger = function () {
             Args.check(LogLevels.hasOwnProperty(this.options.level), "Invalid logging level. Expected error, warn, info, verbose or debug.");
         }
     }
+    // eslint-disable-next-line no-unused-vars
+
 
     _createClass(TraceLogger, [{
         key: "level",
@@ -945,6 +950,8 @@ var TraceLogger = function () {
             this.options.level = _level;
             return this;
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "log",
         value: function log() {
@@ -955,6 +962,8 @@ var TraceLogger = function () {
             var args = Array.prototype.slice.call(arguments);
             this.write("info", sprintf.apply(null, args));
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "info",
         value: function info() {
@@ -965,6 +974,8 @@ var TraceLogger = function () {
             var args = Array.prototype.slice.call(arguments);
             this.write("info", sprintf.apply(null, args));
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "error",
         value: function error() {
@@ -975,6 +986,8 @@ var TraceLogger = function () {
             var args = Array.prototype.slice.call(arguments);
             this.write("error", sprintf.apply(null, args));
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "warn",
         value: function warn() {
@@ -985,6 +998,8 @@ var TraceLogger = function () {
             var args = Array.prototype.slice.call(arguments);
             this.write("warn", sprintf.apply(null, args));
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "verbose",
         value: function verbose() {
@@ -995,6 +1010,8 @@ var TraceLogger = function () {
             var args = Array.prototype.slice.call(arguments);
             this.write("verbose", sprintf.apply(null, args));
         }
+        // eslint-disable-next-line no-unused-vars
+
     }, {
         key: "debug",
         value: function debug() {
@@ -1018,8 +1035,10 @@ var TraceLogger = function () {
             }
             /* tslint:disable:no-console */
             if (this.options.colors) {
+                // eslint-disable-next-line no-console
                 console.log(LogLevelColors[level] + this.timestamp() + " [" + level.toUpperCase() + "] " + text, Reset);
             } else {
+                // eslint-disable-next-line no-console
                 console.log(this.timestamp() + " [" + level.toUpperCase() + "] " + text);
             }
             /* tslint:enable:no-console */
@@ -1046,6 +1065,7 @@ var TraceUtils = exports.TraceUtils = function () {
          * @static
          * @param {...*} data
          */
+        // eslint-disable-next-line no-unused-vars
 
     }, {
         key: "log",
@@ -1061,6 +1081,7 @@ var TraceUtils = exports.TraceUtils = function () {
          * @static
          * @param {...*} data
          */
+        // eslint-disable-next-line no-unused-vars
 
     }, {
         key: "error",
@@ -1077,6 +1098,7 @@ var TraceUtils = exports.TraceUtils = function () {
          * @static
          * @param {...*} data
          */
+        // eslint-disable-next-line no-unused-vars
 
     }, {
         key: "info",
@@ -1093,6 +1115,7 @@ var TraceUtils = exports.TraceUtils = function () {
          * @static
          * @param {*} data
          */
+        // eslint-disable-next-line no-unused-vars
 
     }, {
         key: "warn",
@@ -1109,6 +1132,7 @@ var TraceUtils = exports.TraceUtils = function () {
          * @static
          * @param {...*} data
          */
+        // eslint-disable-next-line no-unused-vars
 
     }, {
         key: "debug",
@@ -1125,5 +1149,4 @@ var TraceUtils = exports.TraceUtils = function () {
 }();
 
 TraceUtils.useLogger(new TraceLogger());
-
 //# sourceMappingURL=utils.js.map

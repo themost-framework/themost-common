@@ -12,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
 var q_1 = require("q");
+require("source-map-support/register");
 var emitter_1 = require("../emitter");
 var utils_1 = require("../utils");
 describe("test sequential event emitter", function () {

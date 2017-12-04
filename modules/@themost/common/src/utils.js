@@ -418,7 +418,7 @@ export class LangUtils {
     /**
      * Parses HTTP form formatted values (e.g. "user[name]", user[password], user[options][rememberMe] etc ) and returns the equivalent native object
      * @param {*} form
-     * @param {IConvertOptions} options
+     * @param {*} options
      * @returns {*}
      * @example
      *
@@ -534,7 +534,7 @@ export class LangUtils {
      * @param {*} origin
      * @param {string} expr
      * @param {string} value
-     * @param {IConvertOptions=} options
+     * @param {*=} options
      * @returns {*}
      */
     static extend(origin, expr, value, options) {
@@ -694,10 +694,13 @@ const Reset = "\x1b[0m";
 const FgBlack = "\x1b[30m";
 const FgRed = "\x1b[31m";
 const FgGreen = "\x1b[32m";
+// eslint-disable-next-line no-unused-vars
 const FgYellow = "\x1b[33m";
 const FgBlue = "\x1b[34m";
 const FgMagenta = "\x1b[35m";
+// eslint-disable-next-line no-unused-vars
 const FgCyan = "\x1b[36m";
+// eslint-disable-next-line no-unused-vars
 const FgWhite = "\x1b[37m";
 
 const Bold = "\x1b[1m";
@@ -739,38 +742,38 @@ export class TraceLogger {
             Args.check(LogLevels.hasOwnProperty(this.options.level), "Invalid logging level. Expected error, warn, info, verbose or debug.");
         }
     }
-
+// eslint-disable-next-line no-unused-vars
     level(level) {
         Args.check(LogLevels.hasOwnProperty(level), "Invalid logging level. Expected error, warn, info, verbose or debug.");
         this.options.level = level;
         return this;
     }
-
+// eslint-disable-next-line no-unused-vars
     log(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("info", sprintf.apply(null, args));
     }
-
+// eslint-disable-next-line no-unused-vars
     info(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("info", sprintf.apply(null, args));
     }
-
+// eslint-disable-next-line no-unused-vars
     error(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("error", sprintf.apply(null, args));
     }
-
+// eslint-disable-next-line no-unused-vars
     warn(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("warn", sprintf.apply(null, args));
     }
-
+// eslint-disable-next-line no-unused-vars
     verbose(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("verbose", sprintf.apply(null, args));
     }
-
+// eslint-disable-next-line no-unused-vars
     debug(...data) {
         const args = Array.prototype.slice.call(arguments);
         this.write("debug", sprintf.apply(null, args));
@@ -786,8 +789,10 @@ export class TraceLogger {
         }
         /* tslint:disable:no-console */
         if (this.options.colors) {
+// eslint-disable-next-line no-console
             console.log(LogLevelColors[level] + this.timestamp() + " [" + level.toUpperCase() + "] " + text, Reset);
         } else {
+// eslint-disable-next-line no-console
             console.log(this.timestamp() + " [" + level.toUpperCase() + "] " + text);
         }
         /* tslint:enable:no-console */
@@ -806,6 +811,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
+    // eslint-disable-next-line no-unused-vars
     static log(...data) {
         TraceUtils.logger.log.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
@@ -814,6 +820,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
+    // eslint-disable-next-line no-unused-vars
     static error(...data) {
         TraceUtils.logger.error.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
@@ -823,6 +830,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
+// eslint-disable-next-line no-unused-vars
     static info(...data) {
         TraceUtils.logger.info.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
@@ -832,6 +840,7 @@ export class TraceUtils {
      * @static
      * @param {*} data
      */
+    // eslint-disable-next-line no-unused-vars
     static warn(...data) {
         TraceUtils.logger.warn.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }
@@ -841,6 +850,7 @@ export class TraceUtils {
      * @static
      * @param {...*} data
      */
+    // eslint-disable-next-line no-unused-vars
     static debug(...data) {
         TraceUtils.logger.debug.apply(TraceUtils.logger, Array.prototype.slice.call(arguments));
     }

@@ -11,7 +11,7 @@ var _lodash = require("lodash");
 
 var _ = _interopRequireDefault(_lodash).default;
 
-var _httpErrorCodes = require("./resources/http-error-codes");
+var _httpErrorCodes = require("./http-error-codes");
 
 var Errors = _httpErrorCodes.Errors;
 
@@ -699,5 +699,4 @@ var AccessDeniedError = exports.AccessDeniedError = function (_DataError4) {
 
     return AccessDeniedError;
 }(DataError);
-
 //# sourceMappingURL=errors.js.map

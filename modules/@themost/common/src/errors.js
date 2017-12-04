@@ -8,7 +8,7 @@
  */
 
 import _ from "lodash";
-import {Errors} from "./resources/http-error-codes";
+import {Errors} from "./http-error-codes";
 
 /**
  * @class

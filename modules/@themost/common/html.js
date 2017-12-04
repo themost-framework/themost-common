@@ -245,5 +245,4 @@ var HtmlWriter = exports.HtmlWriter = function () {
 
     return HtmlWriter;
 }();
-
 //# sourceMappingURL=html.js.map

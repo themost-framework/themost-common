@@ -5,10 +5,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 var eslint = require('gulp-eslint');
 
-var commonModule = [
-    'modules/@themost/common/**/*.es6.js',
-    '!modules/@themost/common/node_modules/**/*.es6.js'
-];
+var commonModule = 'modules/@themost/common/src/*.js';
+var commonModuleDist = "modules/@themost/common";
 
 
 function lint(files, options) {
@@ -19,25 +17,19 @@ function lint(files, options) {
     };
 }
 
-function build(files) {
+function build(files, base) {
     return function () {
-
         return gulp.src(files)
-        // .once('data', bundleTimer.start)
-            .pipe(eslint())
-            .pipe(eslint.format())
             .pipe(sourcemaps.init())
             .pipe(babel())
             .pipe(sourcemaps.write('.'))
             //  .pipe(bundleTimer)
-            .pipe(gulp.dest(function (file) {
-                return file.base.replace(/\.es6$/,"");
-            }));
+            .pipe(gulp.dest(base));
     }
 }
 
 // @themost/common
-gulp.task('build:common', ['lint:common'],build(commonModule));
+gulp.task('build:common', ['lint:common'],build(commonModule, commonModuleDist));
 
 //lint @themost/common
 gulp.task('lint:common', lint(commonModule));
@@ -48,11 +40,10 @@ gulp.task('lint', ['lint:common']);
 // build @themost
 gulp.task('build', ['build:common']);
 
-gulp.task('watch', ['build'], function () {
-    var files = commonModule;
-    gulp.watch(files, function(file) {
+gulp.task('watch:common', ['build:common'], function () {
+    gulp.watch(commonModule, function(file) {
         gutil.log(gutil.colors.green('Compiling ' + file.path));
-        return build(file.path)();
+        return build(file.path, commonModuleDist)();
     });
 });
 

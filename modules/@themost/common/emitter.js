@@ -62,6 +62,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
      * @param args
      * @returns {*}
      */
+    // eslint-disable-next-line no-unused-vars
 
 
     _createClass(SequentialEventEmitter, [{
@@ -99,7 +100,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         /**
          * @param {string|symbol} event
          * @param {Function} listener
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -110,7 +111,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         /**
          * @param {string|symbol} event
          * @param {Function} listener
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -121,7 +122,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         /**
          * @param {string|symbol} event
          * @param {Function} listener
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -132,7 +133,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         /**
          * @param {string|symbol} event
          * @param {Function} listener
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -143,7 +144,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         /**
          * @param {string|symbol} event
          * @param {Function} listener
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -153,7 +154,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
         }
         /**
          * @param {string|symbol} event
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -164,7 +165,7 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
 
         /**
          * @param {number} n
-         * @returns SequentialEventEmitter
+         * @returns this
          */
 
     }, {
@@ -223,5 +224,4 @@ var SequentialEventEmitter = exports.SequentialEventEmitter = function (_EventEm
 
     return SequentialEventEmitter;
 }(EventEmitter);
-
 //# sourceMappingURL=emitter.js.map

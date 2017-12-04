@@ -9,8 +9,8 @@
 import _ from "lodash";
 import "source-map-support/register";
 import Symbol from "symbol";
-import {AbstractClassError} from "./errors";
-import {Args, PathUtils, TraceUtils} from "./utils";
+import {AbstractClassError} from "../errors";
+import {Args, PathUtils, TraceUtils} from "../utils";
 
 const configProperty = Symbol("config");
 const currentConfiguration = Symbol("current");

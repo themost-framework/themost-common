@@ -30,6 +30,7 @@ export class SequentialEventEmitter extends EventEmitter {
      * @param args
      * @returns {*}
      */
+// eslint-disable-next-line no-unused-vars
     emit(event, ...args) {
         //get listeners
         if (typeof this[listenersProperty] !== "function") {
@@ -59,7 +60,7 @@ export class SequentialEventEmitter extends EventEmitter {
     /**
      * @param {string|symbol} event
      * @param {Function} listener
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     addListener(event, listener) {
         return super.addListener(event, listener);
@@ -67,7 +68,7 @@ export class SequentialEventEmitter extends EventEmitter {
     /**
      * @param {string|symbol} event
      * @param {Function} listener
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     on(event, listener) {
         return super.on(event, listener);
@@ -75,7 +76,7 @@ export class SequentialEventEmitter extends EventEmitter {
     /**
      * @param {string|symbol} event
      * @param {Function} listener
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     prependListener(event, listener) {
         return super.prependListener(event, listener);
@@ -83,7 +84,7 @@ export class SequentialEventEmitter extends EventEmitter {
     /**
      * @param {string|symbol} event
      * @param {Function} listener
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     prependOnceListener(event, listener) {
         return super.prependOnceListener(event, listener);
@@ -91,14 +92,14 @@ export class SequentialEventEmitter extends EventEmitter {
     /**
      * @param {string|symbol} event
      * @param {Function} listener
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     removeListener(event, listener) {
         return super.removeListener(event, listener);
     }
     /**
      * @param {string|symbol} event
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     removeAllListeners(event) {
     return super.removeAllListeners(event);
@@ -106,7 +107,7 @@ export class SequentialEventEmitter extends EventEmitter {
 
     /**
      * @param {number} n
-     * @returns SequentialEventEmitter
+     * @returns this
      */
     setMaxListeners(n) {
     return super.setMaxListeners(n);
