@@ -4,7 +4,7 @@ var autoExternal = require('rollup-plugin-auto-external');
 var dts = require('rollup-plugin-dts').default;
 
 var dist = './dist/';
-var name = 'themost_xml';
+var name = 'index.js';
 
 module.exports = [{
     input: './src/index.js',
