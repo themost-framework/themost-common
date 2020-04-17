@@ -1,14 +1,8 @@
 {
   "name": "@themost/common",
-  "version": "2.6.0",
-  "description": "MOST Web Framework Common Module",
+  "version": "2.5.2",
+  "description": "MOST Web Framework Codename Blueshift - Common Module",
   "main": "index.js",
-  "scripts": {
-    "build": "rollup -c ./rollup.config.js -m",
-    "test-node": "jasmine src/**/*.spec.ts",
-    "test": "karma start",
-    "prepublishOnly": "npm run build"
-  },
   "peerDependencies": {},
   "repository": {
     "type": "git",
