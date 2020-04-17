@@ -2,7 +2,7 @@
   "name": "themost-common-src",
   "version": "2.0.3",
   "private": true,
-  "description": "MOST Web Framework 2.0 Common Modules",
+  "description": "MOST Web Framework 2.0 Common Module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
