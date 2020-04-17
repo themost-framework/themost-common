@@ -6,3 +6,9 @@ test-context.js
 # build
 rollup.config.js
 babel.config.js
+
+#editors
+.idea
+.vscode
+.theia
+.DS_Store
