@@ -1,3 +1,5 @@
+// tslint:disable-next-line:ban-types
+declare type StrategyConstructor<T> = Function & { prototype: T };
 /**
  * @class
  */
@@ -21,22 +23,22 @@ export declare class ConfigurationBase {
     constructor(configPath?: string);
     /**
      * Register a configuration strategy
-     * @param {Function|*} configStrategyCtor
-     * @param {Function|*} strategyCtor
+     * @param {Function} strategyBaseCtor
+     * @param {Function=} strategyCtor
      * @returns ConfigurationBase
      */
-    public useStrategy(configStrategyCtor: any, strategyCtor: any): this;
+    public useStrategy(strategyBaseCtor: any, strategyCtor?: any): this;
     /**
      * Gets a configuration strategy
-     * @param {Function} configStrategyCtor
+     * @param {Function} strategyBaseCtor
      * @returns {ConfigurationStrategy|*}
      */
-    public getStrategy<T>(configStrategyCtor: new() => T): T;
+    getStrategy<T>(strategyBaseCtor: StrategyConstructor<T>): T;
     /**
      * Gets a configuration strategy
-     * @param {Function} configStrategyCtor
+     * @param {Function} strategyBaseCtor
      */
-    public hasStrategy<T>(configStrategyCtor: new() => T): boolean;
+    public hasStrategy<T>(strategyBaseCtor: StrategyConstructor<T>): boolean;
     /**
      * Returns the configuration source object
      * @returns {*}

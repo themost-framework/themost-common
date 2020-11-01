@@ -58,7 +58,7 @@ function ConfigurationBase(configPath) {
     }
     catch (err) {
         if (err.code === 'MODULE_NOT_FOUND') {
-            TraceUtils.log('The environment specific configuration cannot be found or is inaccesible.');
+            TraceUtils.log('The environment specific configuration cannot be found or is inaccessible.');
             try {
                 configSourcePath = PathUtils.join(this[configPathProperty], 'app.json');
                 TraceUtils.debug('Validating application configuration source on %s.', configSourcePath);
@@ -66,10 +66,10 @@ function ConfigurationBase(configPath) {
             }
             catch(err) {
                 if (err.code === 'MODULE_NOT_FOUND') {
-                    TraceUtils.log('The default application configuration cannot be found or is inaccesible.');
+                    TraceUtils.log('The default application configuration cannot be found or is inaccessible.');
                 }
                 else {
-                    TraceUtils.error('An error occured while trying to open default application configuration.');
+                    TraceUtils.error('An error occurred while trying to open default application configuration.');
                     TraceUtils.error(err);
                 }
                 TraceUtils.debug('Initializing empty configuration');
@@ -77,7 +77,7 @@ function ConfigurationBase(configPath) {
             }
         }
         else {
-            TraceUtils.error('An error occured while trying to open application configuration.');
+            TraceUtils.error('An error occurred while trying to open application configuration.');
             TraceUtils.error(err);
             //load default configuration
             this[configProperty] = { };
@@ -164,33 +164,37 @@ ConfigurationBase.prototype.getConfigurationPath = function() {
 
 /**
  * Register a configuration strategy
- * @param {Function} configStrategyCtor
- * @param {Function} strategyCtor
+ * @param {Function} strategyBaseCtor
+ * @param {Function=} strategyCtor
  * @returns ConfigurationBase
  */
-ConfigurationBase.prototype.useStrategy = function(configStrategyCtor, strategyCtor) {
-    Args.notFunction(configStrategyCtor,"Configuration strategy constructor");
+ConfigurationBase.prototype.useStrategy = function(strategyBaseCtor, strategyCtor) {
+    Args.notFunction(strategyBaseCtor,"Configuration strategy constructor");
+    if (typeof strategyCtor === 'undefined') {
+        this[strategiesProperty]["$".concat(strategyBaseCtor.name)] = new strategyBaseCtor(this);
+        return this;
+    }
     Args.notFunction(strategyCtor,"Strategy constructor");
-    this[strategiesProperty]["$".concat(configStrategyCtor.name)] = new strategyCtor(this);
+    this[strategiesProperty]["$".concat(strategyBaseCtor.name)] = new strategyCtor(this);
     return this;
 };
 //noinspection JSUnusedGlobalSymbols
 /**
  * Gets a configuration strategy
- * @param {Function} configStrategyCtor
+ * @param {Function} strategyBaseCtor
  */
-ConfigurationBase.prototype.getStrategy = function(configStrategyCtor) {
-    Args.notFunction(configStrategyCtor,"Configuration strategy constructor");
-    return this[strategiesProperty]["$".concat(configStrategyCtor.name)];
+ConfigurationBase.prototype.getStrategy = function(strategyBaseCtor) {
+    Args.notFunction(strategyBaseCtor,"Configuration strategy constructor");
+    return this[strategiesProperty]["$".concat(strategyBaseCtor.name)];
 };
 
 /**
  * Gets a configuration strategy
- * @param {Function} configStrategyCtor
+ * @param {Function} strategyBaseCtor
  */
-ConfigurationBase.prototype.hasStrategy = function(configStrategyCtor) {
-    Args.notFunction(configStrategyCtor,"Configuration strategy constructor");
-    return typeof this[strategiesProperty]["$".concat(configStrategyCtor.name)] !== 'undefined';
+ConfigurationBase.prototype.hasStrategy = function(strategyBaseCtor) {
+    Args.notFunction(strategyBaseCtor,"Configuration strategy constructor");
+    return typeof this[strategiesProperty]["$".concat(strategyBaseCtor.name)] !== 'undefined';
 };
 
 /**
@@ -257,9 +261,9 @@ ModuleLoaderStrategy.prototype.require = function(modulePath) {
              * get require paths collection
              * @type string[]
              */
-            let paths = require.resolve.paths(modulePath);
+            var paths = require.resolve.paths(modulePath);
             //get execution
-            let path1 = this.getConfiguration().getExecutionPath();
+            var path1 = this.getConfiguration().getExecutionPath();
             //loop directories to parent (like classic require)
             while (path1) {
                 //if path does not exist in paths collection
@@ -279,7 +283,7 @@ ModuleLoaderStrategy.prototype.require = function(modulePath) {
                     break;
                 }
             }
-            let finalModulePath = require.resolve(modulePath, {
+            var finalModulePath = require.resolve(modulePath, {
                 paths:paths
             });
             return require(finalModulePath);
