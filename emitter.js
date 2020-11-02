@@ -75,6 +75,7 @@ function wrapOnceAsyncListener(event, asyncListener) {
     return result;
 }
 
+// noinspection JSClosureCompilerSyntax,JSClosureCompilerSyntax,JSClosureCompilerSyntax,JSClosureCompilerSyntax
 /**
  * SequentialEventEmitter class is an extension of node.js EventEmitter class where listeners are executing in series.
  * @class
@@ -86,6 +87,7 @@ function SequentialEventEmitter() {
 }
 LangUtils.inherits(SequentialEventEmitter, EventEmitter);
 
+// noinspection JSUnusedGlobalSymbols
 /**
  * Executes event listeners in series.
  * @param {String} event - The event that is going to be executed.
@@ -120,6 +122,7 @@ SequentialEventEmitter.prototype.emit = function(event, args)
     //apply each series
     return applyEachSeries.apply(this, [listeners].concat(argsAndCallback));
 };
+// noinspection JSUnusedGlobalSymbols
 /**
  *
  * @param {string} event
@@ -130,6 +133,7 @@ SequentialEventEmitter.prototype.subscribe = function(event, asyncListener) {
     return this.on(event, wrapAsyncListener(asyncListener));
 }
 
+// noinspection JSUnusedGlobalSymbols
 /**
  *
  * @param {string} event
@@ -155,6 +159,7 @@ SequentialEventEmitter.prototype.unsubscribe = function(event, asyncListener) {
     return this;
 }
 
+// noinspection JSUnusedGlobalSymbols
 /**
  *
  * @param {string} event
@@ -164,6 +169,7 @@ SequentialEventEmitter.prototype.subscribeOnce = function(event, asyncListener) 
     return this.once(event, wrapOnceAsyncListener(event, asyncListener));
 }
 
+// noinspection JSUnusedGlobalSymbols
 /**
  *
  * @param {string} event
