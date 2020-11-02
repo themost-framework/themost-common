@@ -20,6 +20,7 @@
   "dependencies": {
     "async": "^2.5.0",
     "blueimp-md5": "^2.7.0",
+    "es6-promise": "^4.2.8",
     "events": "^1.1.1",
     "hashmap": "^2.3.0",
     "lodash": "^4.17.20",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^3.6.0",
+    "@types/node": "^14.14.6",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "jasmine": "^3.6.3",

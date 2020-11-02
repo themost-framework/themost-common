@@ -26,4 +26,8 @@ export declare class SequentialEventEmitter extends EventEmitter {
     getMaxListeners(): number;
     listenerCount(type: string | symbol): number;
     once(event: string | symbol, listener: (...args: any[]) => void): this;
+    subscribe(event: string | symbol, asyncListener: (...args: any[]) => Promise<void>): this;
+    unsubscribe(event: string | symbol, asyncListener: (...args: any[]) => Promise<void>): this;
+    subscribeOnce(event: string | symbol, asyncListener: (...args: any[]) => Promise<void>): this;
+    next(event: string | symbol, ...args: any[]): Promise<void>;
 }
