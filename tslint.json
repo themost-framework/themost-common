@@ -8,6 +8,7 @@
         "max-classes-per-file": [false],
         "no-bitwise": false,
         "object-literal-sort-keys": false,
-        "interface-name": false
+        "interface-name": false,
+        "quotemark": [true, "single"]
     }
 }

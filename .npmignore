@@ -2,6 +2,9 @@
 spec
 karma.conf.js
 test-context.js
+tslint.json
+tsconfig.json
+tsconfig.spec.json
 
 # build
 rollup.config.js
