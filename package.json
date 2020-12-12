@@ -3,6 +3,7 @@
   "version": "2.5.3",
   "description": "MOST Web Framework Codename Blueshift - Common Module",
   "main": "index.js",
+  "type": "index.d.ts",
   "peerDependencies": {},
   "scripts": {
     "test": "jasmine"
