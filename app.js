@@ -10,8 +10,6 @@
 var AbstractMethodError = require("./errors").AbstractMethodError;
 var AbstractClassError = require("./errors").AbstractClassError;
 var LangUtils = require("./utils").LangUtils;
-var Symbol = require('symbol');
-
 /**
  *
  * @class
@@ -81,24 +79,28 @@ function IApplicationService(app) {
 IApplicationService.prototype.getApplication = function() {
     throw new AbstractMethodError();
 };
-var applicationProperty = Symbol('application');
 /**
  *
  * @class
  * @constructor
- * @param {IApplication} app
+ * @param {ApplicationBase} app
  */
 // eslint-disable-next-line no-unused-vars
 function ApplicationService(app) {
     ApplicationService.super_.bind(this)(app);
-    this[applicationProperty] = app;
+    Object.defineProperty(this, 'application', {
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        value: app
+    });
 }
 LangUtils.inherits(ApplicationService,IApplicationService);
 /**
- * @returns {IApplication}
+ * @returns {ApplicationBase}
  */
 ApplicationService.prototype.getApplication = function() {
-    return this[applicationProperty];
+    return this.application;
 };
 
 module.exports.IApplication = IApplication;

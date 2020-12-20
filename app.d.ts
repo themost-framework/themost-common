@@ -34,15 +34,36 @@ export declare abstract class IApplicationService {
     abstract getApplication(): IApplication;
 }
 
+
+export declare type ApplicationServiceConstructor<T> = Function & { prototype: T };
+
+export declare interface ApplicationBase {
+
+    readonly configuration: ConfigurationBase;
+
+    useStrategy(serviceCtor: ApplicationServiceConstructor<any>, strategyCtor: ApplicationServiceConstructor<any>): this;
+    
+    useService(serviceCtor: ApplicationServiceConstructor<any>): this;
+
+    hasService<T>(serviceCtor: ApplicationServiceConstructor<T>): boolean;
+
+    getService<T>(serviceCtor: ApplicationServiceConstructor<T>): T;
+
+    getConfiguration(): ConfigurationBase;
+}
+
 export declare class ApplicationService implements IApplicationService {
+    readonly application: ApplicationBase;
     /**
      * @constructor
-     * @param {IApplication=} app
+     * @param {ApplicationBase=} app
      */
-    constructor(app: IApplication);
+    constructor(app: ApplicationBase);
     /**
      * Gets the application of this service
-     * @returns {IApplication}
+     * @returns {ApplicationBase}
      */
-    getApplication(): IApplication;
+    getApplication(): ApplicationBase;
 }
+
+
