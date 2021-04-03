@@ -5,6 +5,15 @@ styles: true
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
+// Text colours
+$headingColour: #242e2b !default;
+$bodyColour: #384743 !default;
+$linkColour: #303f9f !default;
+$hoverColour: #008000 !default;
+$focusColour: #fa407a !default;
+$captionColour: #a8adac !default;
+$white: #ffffff !default;
+
 // Typography
 $bodytype: (
   font-family: "Roboto, serif",
