@@ -42,7 +42,7 @@ describe('ConfigurationBase', () => {
 
     it('should use ConfigurationBase.getSource()', ()=> {
         const configuration = new ConfigurationBase();
-        let source = configuration.getSource();
+        const source = configuration.getSource();
         expect(source).toEqual({ settings: {} });
         configuration.setSourceAt('settings/app/title', 'Test Application');
         expect(source).toEqual({
@@ -56,7 +56,7 @@ describe('ConfigurationBase', () => {
 
     it('should use ConfigurationBase.getSourceAt()', ()=> {
         const configuration = new ConfigurationBase();
-        let source = configuration.getSource();
+        const source = configuration.getSource();
         expect(source).toEqual({ settings: {} });
         configuration.setSourceAt('settings/app/title', 'Test Application');
         expect(configuration.getSourceAt('settings/app/title')).toBe('Test Application');
@@ -64,7 +64,7 @@ describe('ConfigurationBase', () => {
 
     it('should use ConfigurationBase.setSourceAt()', ()=> {
         const configuration = new ConfigurationBase();
-        let source = configuration.getSource();
+        const source = configuration.getSource();
         expect(source).toEqual({ settings: {} });
         configuration.setSourceAt('settings/app/title', 'Test Application');
         expect(configuration.getSourceAt('settings/app/title')).toBe('Test Application');

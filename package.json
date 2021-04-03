@@ -6,7 +6,8 @@
   "types": "index.d.ts",
   "peerDependencies": {},
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "typedoc": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,9 @@
     "jasmine": "^3.6.3",
     "jasmine-spec-reporter": "^6.0.0",
     "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typedoc": "^0.20.34",
+    "typedoc-plugin-markdown": "^3.6.0",
     "typescript": "^4.0.5"
   }
 }

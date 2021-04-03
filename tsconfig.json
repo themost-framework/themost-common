@@ -6,7 +6,7 @@
         "sourceMap": true,
         "declaration": true,
         "removeComments": false,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "moduleResolution": "node",
         "module": "commonjs",
         "target": "es5"

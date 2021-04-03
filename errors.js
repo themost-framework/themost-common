@@ -70,7 +70,7 @@ LangUtils.inherits(CodedError, Error);
  * @extends CodedError
  */
 function FileNotFoundError(msg) {
-    FileNotFoundError.super_.bind(this)(msg, "EFOUND");
+    FileNotFoundError.super_.bind(this)(msg, "E_FOUND");
 }
 LangUtils.inherits(FileNotFoundError, CodedError);
 
@@ -84,10 +84,10 @@ LangUtils.inherits(FileNotFoundError, CodedError);
  * @extends CodedError
  */
 function HttpError(status, message, innerMessage) {
-    HttpError.super_.bind(this)(message, "EHTTP");
-    var hstatus = _.isNumber(status) ? status : 500;
+    HttpError.super_.bind(this)(message, "E_HTTP");
+    var finalStatus = _.isNumber(status) ? status : 500;
     var err = _.find(errors, function(x) {
-        return x.statusCode === hstatus;
+        return x.statusCode === finalStatus;
     });
     if (err) {
         this.title = err.title;
@@ -97,7 +97,7 @@ function HttpError(status, message, innerMessage) {
     else {
         this.title = 'Internal Server Error';
         this.message = message || 'The server encountered an internal error and was unable to complete the request.';
-        this.statusCode = hstatus
+        this.statusCode = finalStatus
     }
     if (typeof innerMessage !== 'undefined') {
         this.innerMessage = innerMessage;
@@ -106,14 +106,14 @@ function HttpError(status, message, innerMessage) {
 LangUtils.inherits(HttpError, CodedError);
 
 /**
- * @param {Error} err
+ * @param {Error|HttpError} err
  * @returns {Error|HttpError}
  */
 HttpError.create = function(err) {
     if (_.isNil(err)) {
         return new HttpError(500);
     }
-    if (err.hasOwnProperty('statusCode')) {
+    if (Object.prototype.hasOwnProperty.call(err,'statusCode')) {
         return _.assign(new HttpError(err.statusCode, err.message), err);
     }
     else {
@@ -275,7 +275,7 @@ LangUtils.inherits(HttpServerError, HttpError);
  * @param {string=} field - The target field
  * @param {*} additionalData - Additional data associated with this error
  * @constructor
- * @property {string} code - A string that represents an error code e.g. EDATA
+ * @property {string} code - A string that represents an error code e.g. E_DATA
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.
  * @property {number} status - A number that represents an error status. This error status may be used for throwing the appropriate HTTP error.
@@ -284,14 +284,14 @@ LangUtils.inherits(HttpServerError, HttpError);
  */
 function DataError(code, message, innerMessage, model, field, additionalData) {
     DataError.super_.bind(this)(message, code);
-    this.code  = code || 'EDATA';
+    this.code  = code || 'E_DATA';
     if (typeof model !== 'undefined') {
         this.model = model;
     }
     if (typeof field !== 'undefined') {
         this.field = field;
     }
-    this.message = message || 'A general data error occured.';
+    this.message = message || 'A general data error occurred.';
     if (typeof innerMessage !== 'undefined') {
         this.innerMessage = innerMessage;
     }
@@ -312,7 +312,7 @@ LangUtils.inherits(DataError, CodedError);
  * @extends DataError
  */
 function NotNullError(message, innerMessage, model,field) {
-    NotNullError.super_.bind(this)('ENULL', message || 'A value is required.', innerMessage, model,field);
+    NotNullError.super_.bind(this)('E_NULL', message || 'A value is required.', innerMessage, model,field);
     this.statusCode = 409;
 }
 LangUtils.inherits(NotNullError, DataError);
@@ -326,7 +326,7 @@ LangUtils.inherits(NotNullError, DataError);
  * @extends DataError
  */
 function DataNotFoundError(message, innerMessage, model) {
-    DataNotFoundError.super_.bind(this)('EFOUND', message || 'The requested data was not found.', innerMessage, model);
+    DataNotFoundError.super_.bind(this)('E_FOUND', message || 'The requested data was not found.', innerMessage, model);
     this.statusCode = 404;
 }
 LangUtils.inherits(DataNotFoundError, DataError);
@@ -340,7 +340,7 @@ LangUtils.inherits(DataNotFoundError, DataError);
  * @extends DataError
  */
 function AccessDeniedError(message, innerMessage, model) {
-    AccessDeniedError.super_.bind(this)('EACCESS', ('Access Denied' || message) , innerMessage, model);
+    AccessDeniedError.super_.bind(this)('E_ACCESS', ('Access Denied' || message) , innerMessage, model);
     this.statusCode = 401;
 }
 LangUtils.inherits(AccessDeniedError, DataError);
@@ -354,7 +354,7 @@ LangUtils.inherits(AccessDeniedError, DataError);
  * @extends DataError
  */
 function UniqueConstraintError(message, innerMessage, model) {
-    UniqueConstraintError.super_.bind(this)('EUNQ', message || 'A unique constraint violated', innerMessage, model);
+    UniqueConstraintError.super_.bind(this)('E_UNIQUE', message || 'A unique constraint violated', innerMessage, model);
 }
 LangUtils.inherits(UniqueConstraintError, DataError);
 

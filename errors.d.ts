@@ -213,7 +213,7 @@ export declare class HttpServerError extends HttpError {
 /**
  * @classdesc Extends Error object for throwing exceptions on data operations
  * @class
- * @property {string} code - A string that represents an error code e.g. EDATA
+ * @property {string} code - A string that represents an error code e.g. E_DATA
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.
  * @property {number} status - A number that represents an error status. This error status may be used for throwing the appropriate HTTP error.
@@ -221,11 +221,11 @@ export declare class HttpServerError extends HttpError {
  */
 export declare class DataError extends Error implements IStatusError, ICodeError {
     /**
-     * Gets or sets a string which may be used to identify this error e.g. EDATA, EVIOLATION etc
+     * Gets or sets a string which may be used to identify this error e.g. E_DATA etc
      */
     statusCode: number;
     /**
-     * Gets or sets a string which may be used to identify this error e.g. EDATA, EVIOLATION etc
+     * Gets or sets a string which may be used to identify this error e.g. E_DATA etc
      */
     code: string;
     /**
@@ -245,7 +245,7 @@ export declare class DataError extends Error implements IStatusError, ICodeError
 /**
  * @classdesc Extends Error object for throwing not null exceptions.
  * @class
- * @property {string} code - A string that represents an error code. The default error code is ENULL.
+ * @property {string} code - A string that represents an error code. The default error code is E_NULL.
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.
  * @property {number} status - A number that represents an error status. This error status may be used for throwing the appropriate HTTP error. The default status is 409 (Conflict)
@@ -266,7 +266,7 @@ export declare class NotNullError extends DataError {
 /**
  * @classdesc Extends Error object for throwing not found exceptions.
  * @class
- * @property {string} code - A string that represents an error code. The default error code is EFOUND.
+ * @property {string} code - A string that represents an error code. The default error code is E_FOUND.
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.
  * @property {number} status - A number that represents an error status. This error status may be used for throwing the appropriate HTTP error. The default status is 404 (Conflict)
@@ -285,7 +285,7 @@ export declare class DataNotFoundError extends DataError {
 /**
  * @classdesc Extends Error object for throwing unique constraint exceptions.
  * @class
- * @property {string} code - A string that represents an error code. The default error code is ENULL.
+ * @property {string} code - A string that represents an error code. The default error code is E_NULL.
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.
  * @property {number} status - A number that represents an error status. This error status may be used for throwing the appropriate HTTP error. The default status is 409 (Conflict)
@@ -306,7 +306,7 @@ export declare class UniqueConstraintError extends DataError {
  *
  * @param {string=} message - The error message
  * @param {string=} innerMessage - The error inner message
- * @property {string} code - A string that represents an error code. The error code is EACCESS.
+ * @property {string} code - A string that represents an error code. The error code is E_ACCESS.
  * @property {number} status - A number that represents an error status. The error status is 401.
  * @property {string} message -  The error message.
  * @property {string} innerMessage - The error inner message.

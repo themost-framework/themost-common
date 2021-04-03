@@ -1,4 +1,4 @@
-import {ConfigurationBase} from "./config";
+import {ConfigurationBase} from './config';
 
 export declare abstract class IApplication {
     /**
@@ -29,12 +29,13 @@ export declare abstract class IApplication {
 export declare abstract class IApplicationService {
     /**
      * Gets the application of this service
-     * @returns {IApplication}
+     * @returns {ApplicationBase}
      */
-    abstract getApplication(): IApplication;
+    abstract getApplication(): ApplicationBase;
 }
 
 
+// tslint:disable-next-line:ban-types
 export declare type ApplicationServiceConstructor<T> = Function & { prototype: T };
 
 export declare interface ApplicationBase {
@@ -42,7 +43,7 @@ export declare interface ApplicationBase {
     readonly configuration: ConfigurationBase;
 
     useStrategy(serviceCtor: ApplicationServiceConstructor<any>, strategyCtor: ApplicationServiceConstructor<any>): this;
-    
+
     useService(serviceCtor: ApplicationServiceConstructor<any>): this;
 
     hasService<T>(serviceCtor: ApplicationServiceConstructor<T>): boolean;
