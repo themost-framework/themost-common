@@ -3,20 +3,20 @@ title: false
 styles: true
 ---
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
 
 // Text colours
 $headingColour: #242e2b !default;
 $bodyColour: #384743;
 $linkColour: #303f9f !default;
 $hoverColour: #001970;
-$focusColour: #fa407a !default;
+$focusColour: #001970;
 $captionColour: #a8adac !default;
 $white: #ffffff !default;
 
 // Typography
 $bodytype: (
-  font-family: "Roboto, serif",
+  font-family: "Poppins, serif",
   regular: 400,
   bold: 700,
   italic: italic,
@@ -24,7 +24,7 @@ $bodytype: (
 ) !default;
 
 $headingtype: (
-  font-family: '"Roboto", serif',
+  font-family: '"Poppins", serif',
   regular: 400,
   bold: 700,
   cap-height: 0.75
