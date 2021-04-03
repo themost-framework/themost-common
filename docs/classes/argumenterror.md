@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ArgumentError
+[@themost/common](../README.md) / [Modules](../modules.md) / ArgumentError
 
 # Class: ArgumentError
 
@@ -7,25 +7,6 @@
 * *TypeError*
 
   ↳ **ArgumentError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](argumenterror.md#constructor)
-
-### Properties
-
-- [code](argumenterror.md#code)
-- [message](argumenterror.md#message)
-- [name](argumenterror.md#name)
-- [stack](argumenterror.md#stack)
-- [prepareStackTrace](argumenterror.md#preparestacktrace)
-- [stackTraceLimit](argumenterror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](argumenterror.md#capturestacktrace)
 
 ## Constructors
 
@@ -44,7 +25,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [utils.d.ts:304](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L304)
+Defined in: [utils.d.ts:317](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L317)
 
 ## Properties
 
@@ -54,7 +35,7 @@ Defined in: [utils.d.ts:304](https://github.com/themost-framework/themost-common
 
 Gets or sets a string which may be used to identify this error e.g. ECHECK, ENULL etc
 
-Defined in: [utils.d.ts:304](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L304)
+Defined in: [utils.d.ts:317](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L317)
 
 ___
 

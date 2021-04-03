@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / HttpError
+[@themost/common](../README.md) / [Modules](../modules.md) / HttpError
 
 # Class: HttpError
 
@@ -34,28 +34,6 @@
 
 * [*IStatusError*](../interfaces/istatuserror.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](httperror.md#constructor)
-
-### Properties
-
-- [innerMessage](httperror.md#innermessage)
-- [message](httperror.md#message)
-- [name](httperror.md#name)
-- [stack](httperror.md#stack)
-- [statusCode](httperror.md#statuscode)
-- [title](httperror.md#title)
-- [prepareStackTrace](httperror.md#preparestacktrace)
-- [stackTraceLimit](httperror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](httperror.md#capturestacktrace)
-- [create](httperror.md#create)
-
 ## Constructors
 
 ### constructor
@@ -74,7 +52,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L56)
+Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L56)
 
 ## Properties
 
@@ -84,7 +62,7 @@ Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common
 
 Gets or sets an inner message for this HTTP error.
 
-Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L56)
+Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L56)
 
 ___
 
@@ -126,7 +104,7 @@ Gets or sets the status code if this HTTP error
 
 Implementation of: [IStatusError](../interfaces/istatuserror.md).[statusCode](../interfaces/istatuserror.md#statuscode)
 
-Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L52)
+Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L52)
 
 ___
 
@@ -136,7 +114,7 @@ ___
 
 Gets or sets a short title for this HTTP error (e.g. Not Found, Bad Request)
 
-Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L48)
+Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L48)
 
 ___
 
@@ -212,4 +190,4 @@ Name | Type |
 
 **Returns:** [*HttpError*](httperror.md)
 
-Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L44)
+Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L44)

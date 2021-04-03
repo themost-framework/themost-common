@@ -1,22 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / Base26Number
+[@themost/common](../README.md) / [Modules](../modules.md) / Base26Number
 
 # Class: Base26Number
-
-## Table of contents
-
-### Constructors
-
-- [constructor](base26number.md#constructor)
-
-### Properties
-
-- [value](base26number.md#value)
-
-### Methods
-
-- [toString](base26number.md#tostring)
-- [fromBase26](base26number.md#frombase26)
-- [toBase26](base26number.md#tobase26)
 
 ## Constructors
 
@@ -32,7 +16,7 @@ Name | Type |
 
 **Returns:** [*Base26Number*](base26number.md)
 
-Defined in: [utils.d.ts:51](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L51)
+Defined in: [utils.d.ts:64](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L64)
 
 ## Properties
 
@@ -40,7 +24,7 @@ Defined in: [utils.d.ts:51](https://github.com/themost-framework/themost-common/
 
 • `Private` **value**: *any*
 
-Defined in: [utils.d.ts:51](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L51)
+Defined in: [utils.d.ts:64](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L64)
 
 ## Methods
 
@@ -50,7 +34,7 @@ Defined in: [utils.d.ts:51](https://github.com/themost-framework/themost-common/
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:53](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L53)
+Defined in: [utils.d.ts:66](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L66)
 
 ___
 
@@ -66,7 +50,7 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: [utils.d.ts:50](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L50)
+Defined in: [utils.d.ts:63](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L63)
 
 ___
 
@@ -82,4 +66,4 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:49](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L49)
+Defined in: [utils.d.ts:62](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L62)

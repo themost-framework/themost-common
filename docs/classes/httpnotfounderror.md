@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / HttpNotFoundError
+[@themost/common](../README.md) / [Modules](../modules.md) / HttpNotFoundError
 
 # Class: HttpNotFoundError
 
@@ -9,29 +9,6 @@
 * [*HttpError*](httperror.md)
 
   ↳ **HttpNotFoundError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](httpnotfounderror.md#constructor)
-
-### Properties
-
-- [innerMessage](httpnotfounderror.md#innermessage)
-- [message](httpnotfounderror.md#message)
-- [name](httpnotfounderror.md#name)
-- [resource](httpnotfounderror.md#resource)
-- [stack](httpnotfounderror.md#stack)
-- [statusCode](httpnotfounderror.md#statuscode)
-- [title](httpnotfounderror.md#title)
-- [prepareStackTrace](httpnotfounderror.md#preparestacktrace)
-- [stackTraceLimit](httpnotfounderror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](httpnotfounderror.md#capturestacktrace)
-- [create](httpnotfounderror.md#create)
 
 ## Constructors
 
@@ -50,7 +27,7 @@ Name | Type |
 
 Overrides: [HttpError](httperror.md)
 
-Defined in: [errors.d.ts:82](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L82)
+Defined in: [errors.d.ts:82](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L82)
 
 ## Properties
 
@@ -62,7 +39,7 @@ Gets or sets an inner message for this HTTP error.
 
 Inherited from: [HttpError](httperror.md).[innerMessage](httperror.md#innermessage)
 
-Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L56)
+Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L56)
 
 ___
 
@@ -92,7 +69,7 @@ ___
 
 Gets or sets the resource which could not to be found
 
-Defined in: [errors.d.ts:92](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L92)
+Defined in: [errors.d.ts:92](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L92)
 
 ___
 
@@ -114,7 +91,7 @@ Gets or sets the status code if this HTTP error
 
 Inherited from: [HttpError](httperror.md).[statusCode](httperror.md#statuscode)
 
-Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L52)
+Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L52)
 
 ___
 
@@ -126,7 +103,7 @@ Gets or sets a short title for this HTTP error (e.g. Not Found, Bad Request)
 
 Inherited from: [HttpError](httperror.md).[title](httperror.md#title)
 
-Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L48)
+Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L48)
 
 ___
 
@@ -204,4 +181,4 @@ Name | Type |
 
 Inherited from: [HttpError](httperror.md)
 
-Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L44)
+Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L44)

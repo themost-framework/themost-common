@@ -1,19 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / IApplication
+[@themost/common](../README.md) / [Modules](../modules.md) / IApplication
 
 # Class: IApplication
-
-## Table of contents
-
-### Constructors
-
-- [constructor](iapplication.md#constructor)
-
-### Methods
-
-- [getConfiguration](iapplication.md#getconfiguration)
-- [getStrategy](iapplication.md#getstrategy)
-- [hasStrategy](iapplication.md#hasstrategy)
-- [useStrategy](iapplication.md#usestrategy)
 
 ## Constructors
 
@@ -33,7 +20,7 @@ Gets the configuration of this application
 
 **Returns:** [*ConfigurationBase*](configurationbase.md)
 
-Defined in: [app.d.ts:26](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L26)
+Defined in: [app.d.ts:26](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L26)
 
 ___
 
@@ -55,7 +42,7 @@ Name | Type |
 
 **Returns:** T
 
-Defined in: [app.d.ts:20](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L20)
+Defined in: [app.d.ts:20](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L20)
 
 ___
 
@@ -71,7 +58,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [app.d.ts:15](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L15)
+Defined in: [app.d.ts:15](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L15)
 
 ___
 
@@ -92,4 +79,4 @@ Name | Type |
 
 IApplication
 
-Defined in: [app.d.ts:10](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L10)
+Defined in: [app.d.ts:10](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L10)

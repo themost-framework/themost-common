@@ -1,14 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / IHttpErrorCode
+[@themost/common](../README.md) / [Modules](../modules.md) / IHttpErrorCode
 
 # Interface: IHttpErrorCode
-
-## Table of contents
-
-### Properties
-
-- [message](ihttperrorcode.md#message)
-- [status](ihttperrorcode.md#status)
-- [title](ihttperrorcode.md#title)
 
 ## Properties
 
@@ -16,7 +8,7 @@
 
 • **message**: *string*
 
-Defined in: [errors.d.ts:4](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L4)
+Defined in: [errors.d.ts:4](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L4)
 
 ___
 
@@ -24,7 +16,7 @@ ___
 
 • **status**: *number*
 
-Defined in: [errors.d.ts:3](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L3)
+Defined in: [errors.d.ts:3](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L3)
 
 ___
 
@@ -32,4 +24,4 @@ ___
 
 • **title**: *string*
 
-Defined in: [errors.d.ts:2](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L2)
+Defined in: [errors.d.ts:2](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L2)

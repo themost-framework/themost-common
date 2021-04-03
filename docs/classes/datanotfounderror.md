@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / DataNotFoundError
+[@themost/common](../README.md) / [Modules](../modules.md) / DataNotFoundError
 
 # Class: DataNotFoundError
 
@@ -20,29 +20,6 @@
 
   ↳ **DataNotFoundError**
 
-## Table of contents
-
-### Constructors
-
-- [constructor](datanotfounderror.md#constructor)
-
-### Properties
-
-- [code](datanotfounderror.md#code)
-- [field](datanotfounderror.md#field)
-- [innerMessage](datanotfounderror.md#innermessage)
-- [message](datanotfounderror.md#message)
-- [model](datanotfounderror.md#model)
-- [name](datanotfounderror.md#name)
-- [stack](datanotfounderror.md#stack)
-- [statusCode](datanotfounderror.md#statuscode)
-- [prepareStackTrace](datanotfounderror.md#preparestacktrace)
-- [stackTraceLimit](datanotfounderror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](datanotfounderror.md#capturestacktrace)
-
 ## Constructors
 
 ### constructor
@@ -61,7 +38,7 @@ Name | Type | Description |
 
 Overrides: [DataError](dataerror.md)
 
-Defined in: [errors.d.ts:276](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L276)
+Defined in: [errors.d.ts:276](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L276)
 
 ## Properties
 
@@ -73,7 +50,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Inherited from: [DataError](dataerror.md).[code](dataerror.md#code)
 
-Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L230)
+Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L230)
 
 ___
 
@@ -85,7 +62,7 @@ Gets or sets a string which represents the target data field, if any
 
 Inherited from: [DataError](dataerror.md).[field](dataerror.md#field)
 
-Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L238)
+Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L238)
 
 ___
 
@@ -97,7 +74,7 @@ Gets or sets an inner message for this error.
 
 Inherited from: [DataError](dataerror.md).[innerMessage](dataerror.md#innermessage)
 
-Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L242)
+Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L242)
 
 ___
 
@@ -119,7 +96,7 @@ Gets or sets a string which represents the target data model, if any
 
 Inherited from: [DataError](dataerror.md).[model](dataerror.md#model)
 
-Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L234)
+Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L234)
 
 ___
 
@@ -151,7 +128,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Inherited from: [DataError](dataerror.md).[statusCode](dataerror.md#statuscode)
 
-Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L226)
+Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L226)
 
 ___
 

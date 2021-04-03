@@ -1,31 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ConfigurationBase
+[@themost/common](../README.md) / [Modules](../modules.md) / ConfigurationBase
 
 # Class: ConfigurationBase
-
-## Table of contents
-
-### Constructors
-
-- [constructor](configurationbase.md#constructor)
-
-### Properties
-
-- [settings](configurationbase.md#settings)
-
-### Methods
-
-- [getConfigurationPath](configurationbase.md#getconfigurationpath)
-- [getExecutionPath](configurationbase.md#getexecutionpath)
-- [getSource](configurationbase.md#getsource)
-- [getSourceAt](configurationbase.md#getsourceat)
-- [getStrategy](configurationbase.md#getstrategy)
-- [hasSourceAt](configurationbase.md#hassourceat)
-- [hasStrategy](configurationbase.md#hasstrategy)
-- [setExecutionPath](configurationbase.md#setexecutionpath)
-- [setSourceAt](configurationbase.md#setsourceat)
-- [useStrategy](configurationbase.md#usestrategy)
-- [getCurrent](configurationbase.md#getcurrent)
-- [setCurrent](configurationbase.md#setcurrent)
 
 ## Constructors
 
@@ -41,7 +16,7 @@ Name | Type |
 
 **Returns:** [*ConfigurationBase*](configurationbase.md)
 
-Defined in: [config.d.ts:18](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L18)
+Defined in: [config.d.ts:18](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L18)
 
 ## Properties
 
@@ -49,7 +24,7 @@ Defined in: [config.d.ts:18](https://github.com/themost-framework/themost-common
 
 • `Readonly` **settings**: *any*
 
-Defined in: [config.d.ts:18](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L18)
+Defined in: [config.d.ts:18](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L18)
 
 ## Methods
 
@@ -61,7 +36,7 @@ Gets the current configuration path
 
 **Returns:** *string*
 
-Defined in: [config.d.ts:80](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L80)
+Defined in: [config.d.ts:80](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L80)
 
 ___
 
@@ -73,7 +48,7 @@ Gets the current execution path
 
 **Returns:** *string*
 
-Defined in: [config.d.ts:75](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L75)
+Defined in: [config.d.ts:75](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L75)
 
 ___
 
@@ -85,7 +60,7 @@ Returns the configuration source object
 
 **Returns:** *any*
 
-Defined in: [config.d.ts:46](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L46)
+Defined in: [config.d.ts:46](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L46)
 
 ___
 
@@ -103,7 +78,7 @@ Name | Type | Description |
 
 **Returns:** *any*
 
-Defined in: [config.d.ts:52](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L52)
+Defined in: [config.d.ts:52](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L52)
 
 ___
 
@@ -127,7 +102,7 @@ Name | Type |
 
 **Returns:** T
 
-Defined in: [config.d.ts:36](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L36)
+Defined in: [config.d.ts:36](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L36)
 
 ___
 
@@ -145,7 +120,7 @@ Name | Type | Description |
 
 **Returns:** *boolean*
 
-Defined in: [config.d.ts:58](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L58)
+Defined in: [config.d.ts:58](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L58)
 
 ___
 
@@ -169,7 +144,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [config.d.ts:41](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L41)
+Defined in: [config.d.ts:41](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L41)
 
 ___
 
@@ -187,7 +162,7 @@ Name | Type |
 
 **Returns:** [*ConfigurationBase*](configurationbase.md)
 
-Defined in: [config.d.ts:70](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L70)
+Defined in: [config.d.ts:70](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L70)
 
 ___
 
@@ -206,7 +181,7 @@ Name | Type | Description |
 
 **Returns:** *any*
 
-Defined in: [config.d.ts:65](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L65)
+Defined in: [config.d.ts:65](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L65)
 
 ___
 
@@ -227,7 +202,7 @@ Name | Type |
 
 ConfigurationBase
 
-Defined in: [config.d.ts:30](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L30)
+Defined in: [config.d.ts:30](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L30)
 
 ___
 
@@ -241,7 +216,7 @@ Gets the current configuration
 
 ConfigurationBase - An instance of DataConfiguration class which represents the current data configuration
 
-Defined in: [config.d.ts:11](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L11)
+Defined in: [config.d.ts:11](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L11)
 
 ___
 
@@ -261,4 +236,4 @@ Name | Type |
 
 ConfigurationBase - An instance of ApplicationConfiguration class which represents the current configuration
 
-Defined in: [config.d.ts:17](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L17)
+Defined in: [config.d.ts:17](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L17)

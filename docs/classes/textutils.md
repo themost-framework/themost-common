@@ -1,19 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / TextUtils
+[@themost/common](../README.md) / [Modules](../modules.md) / TextUtils
 
 # Class: TextUtils
-
-## Table of contents
-
-### Constructors
-
-- [constructor](textutils.md#constructor)
-
-### Methods
-
-- [newUUID](textutils.md#newuuid)
-- [toMD5](textutils.md#tomd5)
-- [toSHA1](textutils.md#tosha1)
-- [toSHA256](textutils.md#tosha256)
 
 ## Constructors
 
@@ -35,7 +22,7 @@ Returns a random GUID/UUID string
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:82](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L82)
+Defined in: [utils.d.ts:95](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L95)
 
 ___
 
@@ -55,7 +42,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:62](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L62)
+Defined in: [utils.d.ts:75](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L75)
 
 ___
 
@@ -75,7 +62,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:69](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L69)
+Defined in: [utils.d.ts:82](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L82)
 
 ___
 
@@ -95,4 +82,4 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:76](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L76)
+Defined in: [utils.d.ts:89](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L89)

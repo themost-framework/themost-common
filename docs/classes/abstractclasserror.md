@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / AbstractClassError
+[@themost/common](../README.md) / [Modules](../modules.md) / AbstractClassError
 
 # Class: AbstractClassError
 
@@ -9,24 +9,6 @@
 * *TypeError*
 
   ↳ **AbstractClassError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](abstractclasserror.md#constructor)
-
-### Properties
-
-- [message](abstractclasserror.md#message)
-- [name](abstractclasserror.md#name)
-- [stack](abstractclasserror.md#stack)
-- [prepareStackTrace](abstractclasserror.md#preparestacktrace)
-- [stackTraceLimit](abstractclasserror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](abstractclasserror.md#capturestacktrace)
 
 ## Constructors
 
@@ -44,7 +26,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [errors.d.ts:25](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L25)
+Defined in: [errors.d.ts:25](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L25)
 
 ## Properties
 

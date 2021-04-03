@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / UniqueConstraintError
+[@themost/common](../README.md) / [Modules](../modules.md) / UniqueConstraintError
 
 # Class: UniqueConstraintError
 
@@ -22,30 +22,6 @@
 
   ↳ **UniqueConstraintError**
 
-## Table of contents
-
-### Constructors
-
-- [constructor](uniqueconstrainterror.md#constructor)
-
-### Properties
-
-- [code](uniqueconstrainterror.md#code)
-- [constraint](uniqueconstrainterror.md#constraint)
-- [field](uniqueconstrainterror.md#field)
-- [innerMessage](uniqueconstrainterror.md#innermessage)
-- [message](uniqueconstrainterror.md#message)
-- [model](uniqueconstrainterror.md#model)
-- [name](uniqueconstrainterror.md#name)
-- [stack](uniqueconstrainterror.md#stack)
-- [statusCode](uniqueconstrainterror.md#statuscode)
-- [prepareStackTrace](uniqueconstrainterror.md#preparestacktrace)
-- [stackTraceLimit](uniqueconstrainterror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](uniqueconstrainterror.md#capturestacktrace)
-
 ## Constructors
 
 ### constructor
@@ -65,7 +41,7 @@ Name | Type |
 
 Overrides: [DataError](dataerror.md)
 
-Defined in: [errors.d.ts:300](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L300)
+Defined in: [errors.d.ts:300](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L300)
 
 ## Properties
 
@@ -77,7 +53,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Inherited from: [DataError](dataerror.md).[code](dataerror.md#code)
 
-Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L230)
+Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L230)
 
 ___
 
@@ -87,7 +63,7 @@ ___
 
 Gets or sets the name of the violated constraint
 
-Defined in: [errors.d.ts:300](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L300)
+Defined in: [errors.d.ts:300](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L300)
 
 ___
 
@@ -99,7 +75,7 @@ Gets or sets a string which represents the target data field, if any
 
 Inherited from: [DataError](dataerror.md).[field](dataerror.md#field)
 
-Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L238)
+Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L238)
 
 ___
 
@@ -111,7 +87,7 @@ Gets or sets an inner message for this error.
 
 Inherited from: [DataError](dataerror.md).[innerMessage](dataerror.md#innermessage)
 
-Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L242)
+Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L242)
 
 ___
 
@@ -133,7 +109,7 @@ Gets or sets a string which represents the target data model, if any
 
 Inherited from: [DataError](dataerror.md).[model](dataerror.md#model)
 
-Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L234)
+Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L234)
 
 ___
 
@@ -165,7 +141,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Inherited from: [DataError](dataerror.md).[statusCode](dataerror.md#statuscode)
 
-Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L226)
+Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L226)
 
 ___
 

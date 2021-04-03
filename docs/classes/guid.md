@@ -1,24 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / Guid
+[@themost/common](../README.md) / [Modules](../modules.md) / Guid
 
 # Class: Guid
-
-## Table of contents
-
-### Constructors
-
-- [constructor](guid.md#constructor)
-
-### Properties
-
-- [value](guid.md#value)
-
-### Methods
-
-- [toJSON](guid.md#tojson)
-- [toString](guid.md#tostring)
-- [valueOf](guid.md#valueof)
-- [isGuid](guid.md#isguid)
-- [newGuid](guid.md#newguid)
 
 ## Constructors
 
@@ -34,7 +16,7 @@ Name | Type |
 
 **Returns:** [*Guid*](guid.md)
 
-Defined in: [utils.d.ts:97](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L97)
+Defined in: [utils.d.ts:110](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L110)
 
 ## Properties
 
@@ -42,7 +24,7 @@ Defined in: [utils.d.ts:97](https://github.com/themost-framework/themost-common/
 
 • `Private` **value**: *any*
 
-Defined in: [utils.d.ts:97](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L97)
+Defined in: [utils.d.ts:110](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L110)
 
 ## Methods
 
@@ -52,7 +34,7 @@ Defined in: [utils.d.ts:97](https://github.com/themost-framework/themost-common/
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:111](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L111)
+Defined in: [utils.d.ts:124](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L124)
 
 ___
 
@@ -62,7 +44,7 @@ ___
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:106](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L106)
+Defined in: [utils.d.ts:119](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L119)
 
 ___
 
@@ -72,7 +54,7 @@ ___
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:110](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L110)
+Defined in: [utils.d.ts:123](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L123)
 
 ___
 
@@ -88,7 +70,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [utils.d.ts:92](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L92)
+Defined in: [utils.d.ts:105](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L105)
 
 ___
 
@@ -98,4 +80,4 @@ ___
 
 **Returns:** [*Guid*](guid.md)
 
-Defined in: [utils.d.ts:96](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L96)
+Defined in: [utils.d.ts:109](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L109)

@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ModuleLoaderStrategy
+[@themost/common](../README.md) / [Modules](../modules.md) / ModuleLoaderStrategy
 
 # Class: ModuleLoaderStrategy
 
@@ -9,17 +9,6 @@
   ↳ **ModuleLoaderStrategy**
 
   ↳↳ [*DefaultModuleLoaderStrategy*](defaultmoduleloaderstrategy.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](moduleloaderstrategy.md#constructor)
-
-### Methods
-
-- [getConfiguration](moduleloaderstrategy.md#getconfiguration)
-- [require](moduleloaderstrategy.md#require)
 
 ## Constructors
 
@@ -37,7 +26,7 @@ Name | Type |
 
 Overrides: [ConfigurationStrategy](configurationstrategy.md)
 
-Defined in: [config.d.ts:96](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L96)
+Defined in: [config.d.ts:96](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L96)
 
 ## Methods
 
@@ -49,7 +38,7 @@ Defined in: [config.d.ts:96](https://github.com/themost-framework/themost-common
 
 Inherited from: [ConfigurationStrategy](configurationstrategy.md)
 
-Defined in: [config.d.ts:94](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L94)
+Defined in: [config.d.ts:94](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L94)
 
 ___
 
@@ -65,4 +54,4 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [config.d.ts:106](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L106)
+Defined in: [config.d.ts:106](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L106)

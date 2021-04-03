@@ -1,24 +1,10 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ApplicationService
+[@themost/common](../README.md) / [Modules](../modules.md) / ApplicationService
 
 # Class: ApplicationService
 
 ## Implements
 
 * [*IApplicationService*](iapplicationservice.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](applicationservice.md#constructor)
-
-### Properties
-
-- [application](applicationservice.md#application)
-
-### Methods
-
-- [getApplication](applicationservice.md#getapplication)
 
 ## Constructors
 
@@ -34,7 +20,7 @@ Name | Type |
 
 **Returns:** [*ApplicationService*](applicationservice.md)
 
-Defined in: [app.d.ts:57](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L57)
+Defined in: [app.d.ts:57](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L57)
 
 ## Properties
 
@@ -42,7 +28,7 @@ Defined in: [app.d.ts:57](https://github.com/themost-framework/themost-common/bl
 
 • `Readonly` **application**: [*ApplicationBase*](../interfaces/applicationbase.md)
 
-Defined in: [app.d.ts:57](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L57)
+Defined in: [app.d.ts:57](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L57)
 
 ## Methods
 
@@ -56,4 +42,4 @@ Gets the application of this service
 
 Implementation of: void
 
-Defined in: [app.d.ts:67](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L67)
+Defined in: [app.d.ts:67](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L67)

@@ -1,12 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / IConvertOptions
+[@themost/common](../README.md) / [Modules](../modules.md) / IConvertOptions
 
 # Interface: IConvertOptions
-
-## Table of contents
-
-### Properties
-
-- [convertValues](iconvertoptions.md#convertvalues)
 
 ## Properties
 
@@ -14,4 +8,4 @@
 
 • **convertValues**: *boolean*
 
-Defined in: [utils.d.ts:137](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L137)
+Defined in: [utils.d.ts:150](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L150)

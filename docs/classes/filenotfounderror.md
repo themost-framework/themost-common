@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / FileNotFoundError
+[@themost/common](../README.md) / [Modules](../modules.md) / FileNotFoundError
 
 # Class: FileNotFoundError
 
@@ -7,24 +7,6 @@
 * *Error*
 
   ↳ **FileNotFoundError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](filenotfounderror.md#constructor)
-
-### Properties
-
-- [message](filenotfounderror.md#message)
-- [name](filenotfounderror.md#name)
-- [stack](filenotfounderror.md#stack)
-- [prepareStackTrace](filenotfounderror.md#preparestacktrace)
-- [stackTraceLimit](filenotfounderror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](filenotfounderror.md#capturestacktrace)
 
 ## Constructors
 
@@ -42,7 +24,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [errors.d.ts:32](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L32)
+Defined in: [errors.d.ts:32](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L32)
 
 ## Properties
 

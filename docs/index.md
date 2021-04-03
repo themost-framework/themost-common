@@ -1,4 +1,4 @@
-@themost/common / [Modules](modules.md)
+@themost/common / [Exports](modules.md)
 
 [![npm](https://img.shields.io/npm/v/@themost%2Fcommon.svg)](https://www.npmjs.com/package/@themost%2Fcommon)
 ![](https://img.shields.io/david/themost-framework/themost-common) ![](https://img.shields.io/david/peer/themost-framework/themost-common)

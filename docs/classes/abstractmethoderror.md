@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / AbstractMethodError
+[@themost/common](../README.md) / [Modules](../modules.md) / AbstractMethodError
 
 # Class: AbstractMethodError
 
@@ -7,24 +7,6 @@
 * *TypeError*
 
   ↳ **AbstractMethodError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](abstractmethoderror.md#constructor)
-
-### Properties
-
-- [message](abstractmethoderror.md#message)
-- [name](abstractmethoderror.md#name)
-- [stack](abstractmethoderror.md#stack)
-- [prepareStackTrace](abstractmethoderror.md#preparestacktrace)
-- [stackTraceLimit](abstractmethoderror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](abstractmethoderror.md#capturestacktrace)
 
 ## Constructors
 
@@ -42,7 +24,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [errors.d.ts:16](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L16)
+Defined in: [errors.d.ts:16](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L16)
 
 ## Properties
 

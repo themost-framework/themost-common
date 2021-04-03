@@ -4,12 +4,25 @@
 export declare class Args {
     /**
      * Checks the expression and throws an exception if the condition is not met.
+     *
+     * ```typescript
+     * const value = 1;
+     * Args.check(value > 0, new Error('Value must be greater than 0.');
+     * ```
      * @param {*} expr
      * @param {string|Error} err
      */
     static check(expr: any, err: string | Error): void;
     /**
-     *
+     * Returns an error if the given value is null
+     * ```typescript
+     * validate(value: any) {
+     *     Args.notNull(value, 'Value');
+     *     if (value === 'export') {
+     *         //
+     *     }
+     * }
+     * ```
      * @param {*} arg
      * @param {string} name
      */

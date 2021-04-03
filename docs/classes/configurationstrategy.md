@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ConfigurationStrategy
+[@themost/common](../README.md) / [Modules](../modules.md) / ConfigurationStrategy
 
 # Class: ConfigurationStrategy
 
@@ -7,16 +7,6 @@
 * **ConfigurationStrategy**
 
   ↳ [*ModuleLoaderStrategy*](moduleloaderstrategy.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](configurationstrategy.md#constructor)
-
-### Methods
-
-- [getConfiguration](configurationstrategy.md#getconfiguration)
 
 ## Constructors
 
@@ -32,7 +22,7 @@ Name | Type |
 
 **Returns:** [*ConfigurationStrategy*](configurationstrategy.md)
 
-Defined in: [config.d.ts:85](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L85)
+Defined in: [config.d.ts:85](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L85)
 
 ## Methods
 
@@ -42,4 +32,4 @@ Defined in: [config.d.ts:85](https://github.com/themost-framework/themost-common
 
 **Returns:** [*ConfigurationBase*](configurationbase.md)
 
-Defined in: [config.d.ts:94](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L94)
+Defined in: [config.d.ts:94](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L94)

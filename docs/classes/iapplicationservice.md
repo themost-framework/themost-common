@@ -1,20 +1,10 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / IApplicationService
+[@themost/common](../README.md) / [Modules](../modules.md) / IApplicationService
 
 # Class: IApplicationService
 
 ## Implemented by
 
 * [*ApplicationService*](applicationservice.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](iapplicationservice.md#constructor)
-
-### Methods
-
-- [getApplication](iapplicationservice.md#getapplication)
 
 ## Constructors
 
@@ -34,4 +24,4 @@ Gets the application of this service
 
 **Returns:** [*ApplicationBase*](../interfaces/applicationbase.md)
 
-Defined in: [app.d.ts:34](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L34)
+Defined in: [app.d.ts:34](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L34)

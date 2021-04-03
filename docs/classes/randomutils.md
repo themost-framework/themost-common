@@ -1,18 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / RandomUtils
+[@themost/common](../README.md) / [Modules](../modules.md) / RandomUtils
 
 # Class: RandomUtils
-
-## Table of contents
-
-### Constructors
-
-- [constructor](randomutils.md#constructor)
-
-### Methods
-
-- [randomChars](randomutils.md#randomchars)
-- [randomHex](randomutils.md#randomhex)
-- [randomInt](randomutils.md#randomint)
 
 ## Constructors
 
@@ -38,7 +26,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:121](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L121)
+Defined in: [utils.d.ts:134](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L134)
 
 ___
 
@@ -58,7 +46,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:134](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L134)
+Defined in: [utils.d.ts:147](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L147)
 
 ___
 
@@ -77,4 +65,4 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: [utils.d.ts:127](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L127)
+Defined in: [utils.d.ts:140](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L140)

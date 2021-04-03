@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / DataError
+[@themost/common](../README.md) / [Modules](../modules.md) / DataError
 
 # Class: DataError
 
@@ -31,29 +31,6 @@
 * [*IStatusError*](../interfaces/istatuserror.md)
 * [*ICodeError*](../interfaces/icodeerror.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](dataerror.md#constructor)
-
-### Properties
-
-- [code](dataerror.md#code)
-- [field](dataerror.md#field)
-- [innerMessage](dataerror.md#innermessage)
-- [message](dataerror.md#message)
-- [model](dataerror.md#model)
-- [name](dataerror.md#name)
-- [stack](dataerror.md#stack)
-- [statusCode](dataerror.md#statuscode)
-- [prepareStackTrace](dataerror.md#preparestacktrace)
-- [stackTraceLimit](dataerror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](dataerror.md#capturestacktrace)
-
 ## Constructors
 
 ### constructor
@@ -74,7 +51,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L242)
+Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L242)
 
 ## Properties
 
@@ -86,7 +63,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Implementation of: [ICodeError](../interfaces/icodeerror.md).[code](../interfaces/icodeerror.md#code)
 
-Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L230)
+Defined in: [errors.d.ts:230](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L230)
 
 ___
 
@@ -96,7 +73,7 @@ ___
 
 Gets or sets a string which represents the target data field, if any
 
-Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L238)
+Defined in: [errors.d.ts:238](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L238)
 
 ___
 
@@ -106,7 +83,7 @@ ___
 
 Gets or sets an inner message for this error.
 
-Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L242)
+Defined in: [errors.d.ts:242](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L242)
 
 ___
 
@@ -126,7 +103,7 @@ ___
 
 Gets or sets a string which represents the target data model, if any
 
-Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L234)
+Defined in: [errors.d.ts:234](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L234)
 
 ___
 
@@ -158,7 +135,7 @@ Gets or sets a string which may be used to identify this error e.g. E_DATA etc
 
 Implementation of: [IStatusError](../interfaces/istatuserror.md).[statusCode](../interfaces/istatuserror.md#statuscode)
 
-Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L226)
+Defined in: [errors.d.ts:226](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L226)
 
 ___
 

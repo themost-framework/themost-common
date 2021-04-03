@@ -1,16 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / PathUtils
+[@themost/common](../README.md) / [Modules](../modules.md) / PathUtils
 
 # Class: PathUtils
-
-## Table of contents
-
-### Constructors
-
-- [constructor](pathutils.md#constructor)
-
-### Methods
-
-- [join](pathutils.md#join)
 
 ## Constructors
 
@@ -34,4 +24,4 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [utils.d.ts:219](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L219)
+Defined in: [utils.d.ts:232](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L232)

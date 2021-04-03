@@ -1,4 +1,4 @@
-[@themost/common](README.md) / Exports
+[@themost/common](README.md) / Modules
 
 # @themost/common
 
@@ -56,11 +56,6 @@
 - [ITraceLogger](interfaces/itracelogger.md)
 - [ITraceLoggerOptions](interfaces/itraceloggeroptions.md)
 
-### Type aliases
-
-- [ApplicationServiceConstructor](modules.md#applicationserviceconstructor)
-- [StrategyConstructor](modules.md#strategyconstructor)
-
 ## Type aliases
 
 ### ApplicationServiceConstructor
@@ -73,7 +68,7 @@ Name |
 :------ |
 `T` |
 
-Defined in: [app.d.ts:39](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L39)
+Defined in: [app.d.ts:39](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L39)
 
 ___
 
@@ -87,4 +82,4 @@ Name |
 :------ |
 `T` |
 
-Defined in: [config.d.ts:2](https://github.com/themost-framework/themost-common/blob/917834f/config.d.ts#L2)
+Defined in: [config.d.ts:2](https://github.com/themost-framework/themost-common/blob/580db67/config.d.ts#L2)

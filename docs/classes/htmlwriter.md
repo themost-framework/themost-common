@@ -1,29 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / HtmlWriter
+[@themost/common](../README.md) / [Modules](../modules.md) / HtmlWriter
 
 # Class: HtmlWriter
-
-## Table of contents
-
-### Constructors
-
-- [constructor](htmlwriter.md#constructor)
-
-### Properties
-
-- [buffer](htmlwriter.md#buffer)
-- [bufferedAttributes](htmlwriter.md#bufferedattributes)
-- [bufferedTags](htmlwriter.md#bufferedtags)
-
-### Methods
-
-- [write](htmlwriter.md#write)
-- [writeAttribute](htmlwriter.md#writeattribute)
-- [writeAttributes](htmlwriter.md#writeattributes)
-- [writeBeginTag](htmlwriter.md#writebegintag)
-- [writeEndTag](htmlwriter.md#writeendtag)
-- [writeFullBeginTag](htmlwriter.md#writefullbegintag)
-- [writeText](htmlwriter.md#writetext)
-- [writeTo](htmlwriter.md#writeto)
 
 ## Constructors
 
@@ -41,7 +18,7 @@
 
 and clear buffer
 
-Defined in: [html.d.ts:20](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L20)
+Defined in: [html.d.ts:20](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L20)
 
 ___
 
@@ -49,7 +26,7 @@ ___
 
 • `Private` **bufferedAttributes**: *any*[]
 
-Defined in: [html.d.ts:9](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L9)
+Defined in: [html.d.ts:9](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L9)
 
 ___
 
@@ -57,7 +34,7 @@ ___
 
 • `Private` **bufferedTags**: *string*[]
 
-Defined in: [html.d.ts:15](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L15)
+Defined in: [html.d.ts:15](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L15)
 
 ## Methods
 
@@ -73,7 +50,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:79](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L79)
+Defined in: [html.d.ts:79](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L79)
 
 ___
 
@@ -92,7 +69,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:30](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L30)
+Defined in: [html.d.ts:30](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L30)
 
 ___
 
@@ -110,7 +87,7 @@ Name | Type | Description |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:39](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L39)
+Defined in: [html.d.ts:39](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L39)
 
 ___
 
@@ -126,7 +103,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:47](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L47)
+Defined in: [html.d.ts:47](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L47)
 
 ___
 
@@ -138,7 +115,7 @@ Writes an end HTML tag (e.g </div>) based on the current buffered tags.
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:63](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L63)
+Defined in: [html.d.ts:63](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L63)
 
 ___
 
@@ -156,7 +133,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:56](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L56)
+Defined in: [html.d.ts:56](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L56)
 
 ___
 
@@ -172,7 +149,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [html.d.ts:71](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L71)
+Defined in: [html.d.ts:71](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L71)
 
 ___
 
@@ -188,4 +165,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [html.d.ts:85](https://github.com/themost-framework/themost-common/blob/917834f/html.d.ts#L85)
+Defined in: [html.d.ts:85](https://github.com/themost-framework/themost-common/blob/580db67/html.d.ts#L85)

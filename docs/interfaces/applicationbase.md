@@ -1,20 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ApplicationBase
+[@themost/common](../README.md) / [Modules](../modules.md) / ApplicationBase
 
 # Interface: ApplicationBase
-
-## Table of contents
-
-### Properties
-
-- [configuration](applicationbase.md#configuration)
-
-### Methods
-
-- [getConfiguration](applicationbase.md#getconfiguration)
-- [getService](applicationbase.md#getservice)
-- [hasService](applicationbase.md#hasservice)
-- [useService](applicationbase.md#useservice)
-- [useStrategy](applicationbase.md#usestrategy)
 
 ## Properties
 
@@ -22,7 +8,7 @@
 
 • `Readonly` **configuration**: [*ConfigurationBase*](../classes/configurationbase.md)
 
-Defined in: [app.d.ts:43](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L43)
+Defined in: [app.d.ts:43](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L43)
 
 ## Methods
 
@@ -32,7 +18,7 @@ Defined in: [app.d.ts:43](https://github.com/themost-framework/themost-common/bl
 
 **Returns:** [*ConfigurationBase*](../classes/configurationbase.md)
 
-Defined in: [app.d.ts:53](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L53)
+Defined in: [app.d.ts:53](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L53)
 
 ___
 
@@ -54,7 +40,7 @@ Name | Type |
 
 **Returns:** T
 
-Defined in: [app.d.ts:51](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L51)
+Defined in: [app.d.ts:51](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L51)
 
 ___
 
@@ -76,7 +62,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [app.d.ts:49](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L49)
+Defined in: [app.d.ts:49](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L49)
 
 ___
 
@@ -92,7 +78,7 @@ Name | Type |
 
 **Returns:** [*ApplicationBase*](applicationbase.md)
 
-Defined in: [app.d.ts:47](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L47)
+Defined in: [app.d.ts:47](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L47)
 
 ___
 
@@ -109,4 +95,4 @@ Name | Type |
 
 **Returns:** [*ApplicationBase*](applicationbase.md)
 
-Defined in: [app.d.ts:45](https://github.com/themost-framework/themost-common/blob/917834f/app.d.ts#L45)
+Defined in: [app.d.ts:45](https://github.com/themost-framework/themost-common/blob/580db67/app.d.ts#L45)

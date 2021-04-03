@@ -1,13 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ITraceLoggerOptions
+[@themost/common](../README.md) / [Modules](../modules.md) / ITraceLoggerOptions
 
 # Interface: ITraceLoggerOptions
-
-## Table of contents
-
-### Properties
-
-- [colors](itraceloggeroptions.md#colors)
-- [level](itraceloggeroptions.md#level)
 
 ## Properties
 
@@ -15,7 +8,7 @@
 
 • **colors**: *boolean*
 
-Defined in: [utils.d.ts:245](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L245)
+Defined in: [utils.d.ts:258](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L258)
 
 ___
 
@@ -23,4 +16,4 @@ ___
 
 • **level**: *string*
 
-Defined in: [utils.d.ts:246](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L246)
+Defined in: [utils.d.ts:259](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L259)

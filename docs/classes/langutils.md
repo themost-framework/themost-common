@@ -1,25 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / LangUtils
+[@themost/common](../README.md) / [Modules](../modules.md) / LangUtils
 
 # Class: LangUtils
-
-## Table of contents
-
-### Constructors
-
-- [constructor](langutils.md#constructor)
-
-### Methods
-
-- [convert](langutils.md#convert)
-- [extend](langutils.md#extend)
-- [getFunctionParams](langutils.md#getfunctionparams)
-- [inherits](langutils.md#inherits)
-- [isDate](langutils.md#isdate)
-- [parseBoolean](langutils.md#parseboolean)
-- [parseFloat](langutils.md#parsefloat)
-- [parseForm](langutils.md#parseform)
-- [parseInt](langutils.md#parseint)
-- [parseValue](langutils.md#parsevalue)
 
 ## Constructors
 
@@ -43,7 +24,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [utils.d.ts:185](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L185)
+Defined in: [utils.d.ts:198](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L198)
 
 ___
 
@@ -62,7 +43,7 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [utils.d.ts:194](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L194)
+Defined in: [utils.d.ts:207](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L207)
 
 ___
 
@@ -80,7 +61,7 @@ Name | Type |
 
 **Returns:** *any*[] \| *RegExpMatchArray*
 
-Defined in: [utils.d.ts:148](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L148)
+Defined in: [utils.d.ts:161](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L161)
 
 ___
 
@@ -97,7 +78,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:207](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L207)
+Defined in: [utils.d.ts:220](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L220)
 
 ___
 
@@ -115,7 +96,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [utils.d.ts:201](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L201)
+Defined in: [utils.d.ts:214](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L214)
 
 ___
 
@@ -133,7 +114,7 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [utils.d.ts:181](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L181)
+Defined in: [utils.d.ts:194](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L194)
 
 ___
 
@@ -151,7 +132,7 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: [utils.d.ts:175](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L175)
+Defined in: [utils.d.ts:188](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L188)
 
 ___
 
@@ -172,7 +153,7 @@ Name | Type |
 
 **Returns:** *object*
 
-Defined in: [utils.d.ts:157](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L157)
+Defined in: [utils.d.ts:170](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L170)
 
 ___
 
@@ -190,7 +171,7 @@ Name | Type |
 
 **Returns:** *number*
 
-Defined in: [utils.d.ts:169](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L169)
+Defined in: [utils.d.ts:182](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L182)
 
 ___
 
@@ -208,4 +189,4 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [utils.d.ts:163](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L163)
+Defined in: [utils.d.ts:176](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L176)

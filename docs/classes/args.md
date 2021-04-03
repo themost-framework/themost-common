@@ -1,23 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / Args
+[@themost/common](../README.md) / [Modules](../modules.md) / Args
 
 # Class: Args
-
-## Table of contents
-
-### Constructors
-
-- [constructor](args.md#constructor)
-
-### Methods
-
-- [check](args.md#check)
-- [notEmpty](args.md#notempty)
-- [notFunction](args.md#notfunction)
-- [notNegative](args.md#notnegative)
-- [notNull](args.md#notnull)
-- [notNumber](args.md#notnumber)
-- [notPositive](args.md#notpositive)
-- [notString](args.md#notstring)
 
 ## Constructors
 
@@ -35,6 +18,11 @@
 
 Checks the expression and throws an exception if the condition is not met.
 
+```typescript
+const value = 1;
+Args.check(value > 0, new Error('Value must be greater than 0.');
+```
+
 #### Parameters:
 
 Name | Type |
@@ -44,7 +32,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:10](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L10)
+Defined in: [utils.d.ts:15](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L15)
 
 ___
 
@@ -61,7 +49,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:36](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L36)
+Defined in: [utils.d.ts:49](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L49)
 
 ___
 
@@ -78,7 +66,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:26](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L26)
+Defined in: [utils.d.ts:39](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L39)
 
 ___
 
@@ -95,13 +83,23 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:41](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L41)
+Defined in: [utils.d.ts:54](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L54)
 
 ___
 
 ### notNull
 
 ▸ `Static`**notNull**(`arg`: *any*, `name`: *string*): *void*
+
+Returns an error if the given value is null
+```typescript
+validate(value: any) {
+    Args.notNull(value, 'Value');
+    if (value === 'export') {
+        //
+    }
+}
+```
 
 #### Parameters:
 
@@ -112,7 +110,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:16](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L16)
+Defined in: [utils.d.ts:29](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L29)
 
 ___
 
@@ -129,7 +127,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:31](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L31)
+Defined in: [utils.d.ts:44](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L44)
 
 ___
 
@@ -146,7 +144,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:46](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L46)
+Defined in: [utils.d.ts:59](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L59)
 
 ___
 
@@ -163,4 +161,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:21](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L21)
+Defined in: [utils.d.ts:34](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L34)

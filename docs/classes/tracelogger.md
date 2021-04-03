@@ -1,32 +1,10 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / TraceLogger
+[@themost/common](../README.md) / [Modules](../modules.md) / TraceLogger
 
 # Class: TraceLogger
 
 ## Implements
 
 * [*ITraceLogger*](../interfaces/itracelogger.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](tracelogger.md#constructor)
-
-### Properties
-
-- [options](tracelogger.md#options)
-
-### Methods
-
-- [debug](tracelogger.md#debug)
-- [error](tracelogger.md#error)
-- [info](tracelogger.md#info)
-- [level](tracelogger.md#level)
-- [log](tracelogger.md#log)
-- [timestamp](tracelogger.md#timestamp)
-- [verbose](tracelogger.md#verbose)
-- [warn](tracelogger.md#warn)
-- [write](tracelogger.md#write)
 
 ## Constructors
 
@@ -42,7 +20,7 @@ Name | Type |
 
 **Returns:** [*TraceLogger*](tracelogger.md)
 
-Defined in: [utils.d.ts:249](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L249)
+Defined in: [utils.d.ts:262](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L262)
 
 ## Properties
 
@@ -50,7 +28,7 @@ Defined in: [utils.d.ts:249](https://github.com/themost-framework/themost-common
 
 • `Private` **options**: *any*
 
-Defined in: [utils.d.ts:249](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L249)
+Defined in: [utils.d.ts:262](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L262)
 
 ## Methods
 
@@ -68,7 +46,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:257](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L257)
+Defined in: [utils.d.ts:270](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L270)
 
 ___
 
@@ -86,7 +64,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:254](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L254)
+Defined in: [utils.d.ts:267](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L267)
 
 ___
 
@@ -104,7 +82,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:253](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L253)
+Defined in: [utils.d.ts:266](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L266)
 
 ___
 
@@ -122,7 +100,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:251](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L251)
+Defined in: [utils.d.ts:264](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L264)
 
 ___
 
@@ -140,7 +118,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:252](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L252)
+Defined in: [utils.d.ts:265](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L265)
 
 ___
 
@@ -150,7 +128,7 @@ ___
 
 **Returns:** *any*
 
-Defined in: [utils.d.ts:258](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L258)
+Defined in: [utils.d.ts:271](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L271)
 
 ___
 
@@ -166,7 +144,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:256](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L256)
+Defined in: [utils.d.ts:269](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L269)
 
 ___
 
@@ -184,7 +162,7 @@ Name | Type |
 
 Implementation of: [ITraceLogger](../interfaces/itracelogger.md)
 
-Defined in: [utils.d.ts:255](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L255)
+Defined in: [utils.d.ts:268](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L268)
 
 ___
 
@@ -201,4 +179,4 @@ Name | Type |
 
 **Returns:** *any*
 
-Defined in: [utils.d.ts:259](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L259)
+Defined in: [utils.d.ts:272](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L272)

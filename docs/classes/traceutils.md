@@ -1,22 +1,6 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / TraceUtils
+[@themost/common](../README.md) / [Modules](../modules.md) / TraceUtils
 
 # Class: TraceUtils
-
-## Table of contents
-
-### Constructors
-
-- [constructor](traceutils.md#constructor)
-
-### Methods
-
-- [debug](traceutils.md#debug)
-- [error](traceutils.md#error)
-- [info](traceutils.md#info)
-- [level](traceutils.md#level)
-- [log](traceutils.md#log)
-- [useLogger](traceutils.md#uselogger)
-- [warn](traceutils.md#warn)
 
 ## Constructors
 
@@ -42,7 +26,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:293](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L293)
+Defined in: [utils.d.ts:306](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L306)
 
 ___
 
@@ -60,7 +44,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:275](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L275)
+Defined in: [utils.d.ts:288](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L288)
 
 ___
 
@@ -78,7 +62,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:281](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L281)
+Defined in: [utils.d.ts:294](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L294)
 
 ___
 
@@ -94,7 +78,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:263](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L263)
+Defined in: [utils.d.ts:276](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L276)
 
 ___
 
@@ -112,7 +96,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:270](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L270)
+Defined in: [utils.d.ts:283](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L283)
 
 ___
 
@@ -128,7 +112,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:265](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L265)
+Defined in: [utils.d.ts:278](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L278)
 
 ___
 
@@ -146,4 +130,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [utils.d.ts:287](https://github.com/themost-framework/themost-common/blob/917834f/utils.d.ts#L287)
+Defined in: [utils.d.ts:300](https://github.com/themost-framework/themost-common/blob/580db67/utils.d.ts#L300)

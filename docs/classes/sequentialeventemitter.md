@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / SequentialEventEmitter
+[@themost/common](../README.md) / [Modules](../modules.md) / SequentialEventEmitter
 
 # Class: SequentialEventEmitter
 
@@ -7,40 +7,6 @@
 * *EventEmitter*
 
   ↳ **SequentialEventEmitter**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](sequentialeventemitter.md#constructor)
-
-### Properties
-
-- [defaultMaxListeners](sequentialeventemitter.md#defaultmaxlisteners)
-- [errorMonitor](sequentialeventemitter.md#errormonitor)
-
-### Methods
-
-- [addListener](sequentialeventemitter.md#addlistener)
-- [emit](sequentialeventemitter.md#emit)
-- [eventNames](sequentialeventemitter.md#eventnames)
-- [getMaxListeners](sequentialeventemitter.md#getmaxlisteners)
-- [listenerCount](sequentialeventemitter.md#listenercount)
-- [listeners](sequentialeventemitter.md#listeners)
-- [next](sequentialeventemitter.md#next)
-- [off](sequentialeventemitter.md#off)
-- [on](sequentialeventemitter.md#on)
-- [once](sequentialeventemitter.md#once)
-- [prependListener](sequentialeventemitter.md#prependlistener)
-- [prependOnceListener](sequentialeventemitter.md#prependoncelistener)
-- [rawListeners](sequentialeventemitter.md#rawlisteners)
-- [removeAllListeners](sequentialeventemitter.md#removealllisteners)
-- [removeListener](sequentialeventemitter.md#removelistener)
-- [setMaxListeners](sequentialeventemitter.md#setmaxlisteners)
-- [subscribe](sequentialeventemitter.md#subscribe)
-- [subscribeOnce](sequentialeventemitter.md#subscribeonce)
-- [unsubscribe](sequentialeventemitter.md#unsubscribe)
-- [listenerCount](sequentialeventemitter.md#listenercount)
 
 ## Constructors
 
@@ -52,7 +18,7 @@
 
 Overrides: void
 
-Defined in: [emitter.d.ts:7](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L7)
+Defined in: [emitter.d.ts:7](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L7)
 
 ## Properties
 
@@ -99,7 +65,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:19](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L19)
+Defined in: [emitter.d.ts:19](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L19)
 
 ___
 
@@ -120,7 +86,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:18](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L18)
+Defined in: [emitter.d.ts:18](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L18)
 
 ___
 
@@ -144,7 +110,7 @@ ___
 
 Overrides: void
 
-Defined in: [emitter.d.ts:26](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L26)
+Defined in: [emitter.d.ts:26](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L26)
 
 ___
 
@@ -162,7 +128,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:27](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L27)
+Defined in: [emitter.d.ts:27](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L27)
 
 ___
 
@@ -197,7 +163,7 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [emitter.d.ts:32](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L32)
+Defined in: [emitter.d.ts:32](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L32)
 
 ___
 
@@ -235,7 +201,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:20](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L20)
+Defined in: [emitter.d.ts:20](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L20)
 
 ___
 
@@ -254,7 +220,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:28](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L28)
+Defined in: [emitter.d.ts:28](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L28)
 
 ___
 
@@ -273,7 +239,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:21](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L21)
+Defined in: [emitter.d.ts:21](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L21)
 
 ___
 
@@ -292,7 +258,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:22](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L22)
+Defined in: [emitter.d.ts:22](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L22)
 
 ___
 
@@ -328,7 +294,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:24](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L24)
+Defined in: [emitter.d.ts:24](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L24)
 
 ___
 
@@ -347,7 +313,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:23](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L23)
+Defined in: [emitter.d.ts:23](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L23)
 
 ___
 
@@ -365,7 +331,7 @@ Name | Type |
 
 Overrides: void
 
-Defined in: [emitter.d.ts:25](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L25)
+Defined in: [emitter.d.ts:25](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L25)
 
 ___
 
@@ -382,7 +348,7 @@ Name | Type |
 
 **Returns:** [*SequentialEventEmitter*](sequentialeventemitter.md)
 
-Defined in: [emitter.d.ts:29](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L29)
+Defined in: [emitter.d.ts:29](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L29)
 
 ___
 
@@ -399,7 +365,7 @@ Name | Type |
 
 **Returns:** [*SequentialEventEmitter*](sequentialeventemitter.md)
 
-Defined in: [emitter.d.ts:31](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L31)
+Defined in: [emitter.d.ts:31](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L31)
 
 ___
 
@@ -416,7 +382,7 @@ Name | Type |
 
 **Returns:** [*SequentialEventEmitter*](sequentialeventemitter.md)
 
-Defined in: [emitter.d.ts:30](https://github.com/themost-framework/themost-common/blob/917834f/emitter.d.ts#L30)
+Defined in: [emitter.d.ts:30](https://github.com/themost-framework/themost-common/blob/580db67/emitter.d.ts#L30)
 
 ___
 

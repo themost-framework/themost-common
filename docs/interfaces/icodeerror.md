@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / ICodeError
+[@themost/common](../README.md) / [Modules](../modules.md) / ICodeError
 
 # Interface: ICodeError
 
@@ -6,16 +6,10 @@
 
 * [*DataError*](../classes/dataerror.md)
 
-## Table of contents
-
-### Properties
-
-- [code](icodeerror.md#code)
-
 ## Properties
 
 ### code
 
 • **code**: *string*
 
-Defined in: [errors.d.ts:10](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L10)
+Defined in: [errors.d.ts:10](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L10)

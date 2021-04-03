@@ -1,4 +1,4 @@
-[@themost/common](../README.md) / [Exports](../modules.md) / HttpForbiddenError
+[@themost/common](../README.md) / [Modules](../modules.md) / HttpForbiddenError
 
 # Class: HttpForbiddenError
 
@@ -13,28 +13,6 @@ HTTP 403 Forbidden Exception class
 * [*HttpError*](httperror.md)
 
   ↳ **HttpForbiddenError**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](httpforbiddenerror.md#constructor)
-
-### Properties
-
-- [innerMessage](httpforbiddenerror.md#innermessage)
-- [message](httpforbiddenerror.md#message)
-- [name](httpforbiddenerror.md#name)
-- [stack](httpforbiddenerror.md#stack)
-- [statusCode](httpforbiddenerror.md#statuscode)
-- [title](httpforbiddenerror.md#title)
-- [prepareStackTrace](httpforbiddenerror.md#preparestacktrace)
-- [stackTraceLimit](httpforbiddenerror.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](httpforbiddenerror.md#capturestacktrace)
-- [create](httpforbiddenerror.md#create)
 
 ## Constructors
 
@@ -53,7 +31,7 @@ Name | Type |
 
 Overrides: [HttpError](httperror.md)
 
-Defined in: [errors.d.ts:192](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L192)
+Defined in: [errors.d.ts:192](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L192)
 
 ## Properties
 
@@ -65,7 +43,7 @@ Gets or sets an inner message for this HTTP error.
 
 Inherited from: [HttpError](httperror.md).[innerMessage](httperror.md#innermessage)
 
-Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L56)
+Defined in: [errors.d.ts:56](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L56)
 
 ___
 
@@ -107,7 +85,7 @@ Gets or sets the status code if this HTTP error
 
 Inherited from: [HttpError](httperror.md).[statusCode](httperror.md#statuscode)
 
-Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L52)
+Defined in: [errors.d.ts:52](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L52)
 
 ___
 
@@ -119,7 +97,7 @@ Gets or sets a short title for this HTTP error (e.g. Not Found, Bad Request)
 
 Inherited from: [HttpError](httperror.md).[title](httperror.md#title)
 
-Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L48)
+Defined in: [errors.d.ts:48](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L48)
 
 ___
 
@@ -197,4 +175,4 @@ Name | Type |
 
 Inherited from: [HttpError](httperror.md)
 
-Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/917834f/errors.d.ts#L44)
+Defined in: [errors.d.ts:44](https://github.com/themost-framework/themost-common/blob/580db67/errors.d.ts#L44)
